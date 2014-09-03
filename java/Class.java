@@ -1140,7 +1140,7 @@ if (genModel.useClassOverrideAnnotation()) {
 if (isImplementation) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-new Runnable() { public void run() { GenClass classExtendsGenClass = genClass.getClassExtendsGenClass(); List<GenFeature> classExtendsAllGenFeatures = classExtendsGenClass == null? Collections.<GenFeature>emptyList() : classExtendsGenClass.getAllGenFeatures();
+ GenClass classExtendsGenClass = genClass.getClassExtendsGenClass(); List<GenFeature> classExtendsAllGenFeatures = classExtendsGenClass == null? Collections.<GenFeature>emptyList() : classExtendsGenClass.getAllGenFeatures();
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 for (GenFeature genFeature : genClass.getReifiedGenFeatures()) {
@@ -1425,10 +1425,10 @@ if (genClass.hasCollidingSetAccessorOperation(genFeature)) {
 //Class/genFeatureReified.override.javajetinc
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-}}}.run();}
+}}}
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-new Runnable() { public void run() {
+
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 for (GenFeature genFeature : (isImplementation ? genClass.getImplementedGenFeatures() : genClass.getDeclaredGenFeatures())) {
@@ -4951,7 +4951,7 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 }//for
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-}}.run();
+}
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 for (GenOperation genOperation : (isImplementation ? genClass.getImplementedGenOperations() : genClass.getDeclaredGenOperations())) {

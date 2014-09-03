@@ -58,29 +58,38 @@ def main(fname):
 
     ## write dynamic code
     for line in file_edit:
-        if "=" in line:
-            if line.index('=') == 0:
-                if "?" in line:
-                ## Equals issue
-                ## Store line in seperate file
-                    if countStore == 0:
-                        writeToFile(file_store, "class "+cleanFileName(fname+"temp")+ " {\n")
-                        writeToFile(file_store, "public static void main (String[] args) {\n")
-                    writeToFile(file_store, line[1:].rstrip('\n')+";"+"\n")
-                    writeToFile(file_destination, staticSymbol+storeSymbol+str(countStore)+"\n")
-                    countStore+= 1
-                else:
-                    writeToFile( file_destination, staticSymbol+line)
-            else:
-                writeToFile( file_destination, line)
-        elif "@" in line:
-            ## annotations are commented out
-            if line.index("@") == 0:
-                writeToFile( file_destination, staticSymbol+line)
-            else:
-                writeToFile( file_destination, line)
+        ##Deal with runnable()
+        if "new Runnable()" in line and staticSymbol not in line :
+            line = line.replace("new Runnable() { public void run() {", "")
+            writeToFile(file_destination, line)
+        
+        elif "}}.run();" in line:
+            line = line.replace("}.run();", "")
+            writeToFile(file_destination, line)
         else:
-            writeToFile( file_destination, line)
+            if "=" in line:
+                if line.index('=') == 0:
+                    if "?" in line:
+                    ## Equals issue
+                    ## Store line in seperate file
+                        if countStore == 0:
+                            writeToFile(file_store, "class "+cleanFileName(fname+"temp")+ " {\n")
+                            writeToFile(file_store, "public static void main (String[] args) {\n")
+                        writeToFile(file_store, line[1:].rstrip('\n')+";"+"\n")
+                        writeToFile(file_destination, staticSymbol+storeSymbol+str(countStore)+"\n")
+                        countStore+= 1
+                    else:
+                        writeToFile( file_destination, staticSymbol+line)
+                else:
+                    writeToFile( file_destination, line)
+            elif "@" in line:
+                ## annotations are commented out
+                if line.index("@") == 0:
+                    writeToFile( file_destination, staticSymbol+line)
+                else:
+                    writeToFile( file_destination, line)
+            else:
+                writeToFile( file_destination, line)
     
     #close main funciton
     writeToFile(file_destination, "\n}\n}")
