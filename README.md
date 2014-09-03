@@ -12,7 +12,7 @@ Requires:
 
 To run:
 - Put files you want to transform in jet folder.
-sh test.sh
+- sh test.sh
 - Transformed files should be in egl folder.
 
 
