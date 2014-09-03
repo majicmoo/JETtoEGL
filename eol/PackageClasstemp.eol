@@ -1,0 +1,12 @@
+{
+    {
+        if (genClass.isMapEntry()) {genClass.getImportedClassName();} else {genClass.getRawImportedInterfaceName() + genClass.getInterfaceWildTypeArguments();};
+        if (genClass.isMapEntry()) {genClass.getImportedClassName();} else {genClass.getImportedWildcardInstanceClassName();};
+        if (genEnum.getImportedName().equals(genEnum.getClassifierID())) {genEnum.getQualifiedName();} else {genEnum.getImportedName();};
+        if (k.hasNext()) {",";} else {"";};
+        if (l.hasNext()) {",";} else {"";};
+        if (isInterface) {genPackage.getPackageInterfaceName();} else {genPackage.getPackageClassName();};
+    }
+
+}
+

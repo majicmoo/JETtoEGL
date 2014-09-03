@@ -1,0 +1,213 @@
+% yava2python project
+% Java grammar mixins with Python grammar definitions
+% Mykhaylo Sorochan, January 2009
+% msorc@bigmir.net, macroexpand.org
+
+% Java grammar used: v3.1, Copyright 2001-2008 James R. Cordy, Xinping Guo and Thomas R. Dean
+% Python grammar used: v1.3 Copyright 2008 Mykhaylo Sorochan and James R. Cordy, 
+%        after the standard Python 2.5 reference grammar, 
+%        Copyright 1990-2008 Python Software Foundation
+
+
+% Copyright 2009 Mykhaylo Sorochan
+%
+% Redistribution and use in source and binary forms, with or without
+% modification, are permitted provided that the following conditions are met:
+%
+%    Redistributions of source code must retain the above copyright notice,
+%    this list of conditions and the following disclaimer.
+%    Redistributions in binary form must reproduce the above copyright notice,
+%    this list of conditions and the following disclaimer in the documentation
+%    and/or other materials provided with the distribution.
+%
+%    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+%    INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+%    AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+%    AUTHORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+%    OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+%    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+%    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+%    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+%    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+%    POSSIBILITY OF SUCH DAMAGE.
+
+
+%% Python tokens
+tokens
+    % Python string forms - shortstrings are already captured by [stringlit] and [charlit]
+    % All may be preceded by a stringprefix, see [stringliteral] below
+    longstringlit	"\"\"\"#[(\"\"\")]*\"\"\""
+    longcharlit		"'''#[(''')]*'''"
+%    % Python number forms - decimal integers and floating point forms are already captured by [number]
+    hexinteger   "0[Xx][\dABCDEFabcdef]+" 
+    octinteger   "0[01234567]+" 
+    pointfloat     "\d*.\d+"		% other forms covered by [floatnumber]
+                 | "\d+.\d*"
+end tokens
+
+keys
+'var
+end keys
+
+% Compound operators
+compounds 
+    '<> '= '+= '-= '*= '/= '%= '&= '|=  '^= '<<= '>>= '**= '//= '**  '>> 
+end compounds 
+
+% Python comments are # to end-of-line
+comments 
+    '# 
+    '\
+end comments
+
+redefine type_declaration
+        [class_declaration]      [NL][NL]
+    |   [interface_declaration]  [NL][NL]
+    |   [enum_declaration]	 [NL]		% T.D. Oct 2007
+    |   [class_dln] [NL][NL]
+end redefine
+
+define class_dln
+    [class_body]
+end define
+
+
+redefine method_or_constructor_declaration
+        [method_declaration]
+    |   [constructor_declaration]
+    |   [method_dec]
+end redefine
+
+define method_dec
+    [method_body]
+end define
+
+
+
+redefine statement
+        [label_statement]        
+    |   [expression_statement]
+    |   [if_statement]
+    |   [switch_statement]
+    |   [while_statement]
+    |   [do_statement]
+    |   [for_statement]
+    |   [for_in_statement]		% T.D. Oct 2007
+    |   [break_statement]
+    |   [continue_statement]
+    |   [return_statement]
+    |   [throw_statement]
+    |   [synchronized_statement]
+    |   [try_statement]
+    |   [assert_statement]		% T.D. Oct 2007
+    |   [block]
+
+    
+    |   [for_stmt]
+
+    
+    |   [print_stmt]
+
+    |   [repeat declaration_or_statement]
+
+    |   [empty_statement]
+    |   [do_stmt]
+end define
+
+redefine assignment_expression
+    ...
+    | [if_stmt]
+end redefine
+
+define if_stmt
+    'if '( [conditional_or_expression] ')  '{  
+        [expression] '; 
+    '} 'else '{ 
+        [conditional_expression] '; 
+    '}
+end define
+
+
+
+
+redefine method_argument	
+	[SPOFF] '( [SPON] [list argument] ')   
+    |   [SPOFF] '( [SPON] [list variable_name] ')   
+end define
+
+
+
+
+
+
+
+define print_stmt 
+        'println( [list argument] [opt ',] [NL] ')';
+end define 
+
+
+redefine assignment_expression
+	...
+    |   'var [unary_expression] '= [expression]
+    
+end redefine
+
+
+define or_conditional_and_expression
+	...
+    |   'or [conditional_and_expression]
+end define
+
+define and_inclusive_or_expression
+	...
+    |   'and [inclusive_or_expression]
+end define
+
+redefine unary_expression
+    ...
+    | [increment]
+    | [decrement]
+end redefine
+
+define increment
+    [primary] '= [primary] '+ '1
+end define
+
+define decrement
+    [primary] '= [primary] '- '1
+end define
+
+define unary_op
+	... 
+	| 'not [SP]
+end define
+
+redefine multiplicative_expression
+    ...
+    | [unary_expression] [SPOFF] '.mod( [unary_expression] [SPON] ') 
+end redefine
+
+redefine equality_op
+    '== | '!= | '= | '<> 
+end redefine
+
+define for_stmt 
+    'for '( [id] 'in [expression] [SPOFF] '){ [SPON] [NL][IN] [repeat declaration_or_statement] [EX] '}
+end define 
+
+define do_stmt
+    [statement] ';
+    'while '( [assignment_expression] ') '{
+        [statement] ';
+    '}
+end define
+
+
+
+% Every end of line may have an optional trailing comment
+define endofline
+    [opt comment] [NL] 
+end define
+
+
+

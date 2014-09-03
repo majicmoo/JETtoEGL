@@ -1,0 +1,47 @@
+{
+    {
+        //&&&staticSymbol&&&<%import testing.*;%>
+        //&&&staticSymbol&&&<%import abc.*;%>
+        //&&&staticSymbol&&&<%import iasdoh.*;%>
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&Do While
+        //&&&staticSymbol&&&<%
+        var count = 1;
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        {
+            System.out.println("Count is: " + count);
+            count = count + 1;
+        }; while (count < 11) {{
+            System.out.println("Count is: " + count);
+            count = count + 1;
+        };} //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&If
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&<%
+        if (month = 8) {
+            month = 7;
+        } else {
+            month = 9;
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&For loop
+        //&&&staticSymbol&&&<%
+        var a = 0;
+        int [] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        for (item in numbers){
+            a = item;
+            ;
+        } //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&    
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&
+    }
+
+}
+

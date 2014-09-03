@@ -1,0 +1,8 @@
+{
+    {
+        if (not  genClass.isEObjectExtension()) {"(EObject)";} else {"";};
+        if (isInterface) {genPackage.getFactoryInterfaceName();} else {genPackage.getFactoryClassName();};
+    }
+
+}
+

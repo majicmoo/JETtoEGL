@@ -1,0 +1,18 @@
+#pragma -comment
+
+comments
+    //
+end comments
+
+redefine statement
+        ...
+    |  [comment_statement]
+end redefine
+
+define comment_statement
+    [repeat comment_NL+]
+end define
+
+define comment_NL
+    [comment] [NL]
+end define

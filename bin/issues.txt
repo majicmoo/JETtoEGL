@@ -1,0 +1,13 @@
+<%for (ListIterator<?> j = genPackage.getProviderSupportedTypes().listIterator(); j.hasNext(); ) {%>
+
+
+switch statements
+
+normal for loops
+
+do while
+
+
+testing
+
+comments

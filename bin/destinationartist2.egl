@@ -1,0 +1,25 @@
+[%var artist = argument; %]
+        
+<h1>[%=artist.name%]</h1>
+        
+        <h2>Books Artist For</h2>
+        <ul>
+        [%
+        for (book in artist.booksArtistFor){
+            %]
+            	<li><a href="[%=book.name%].html">[%=book.name%]</a></li>
+            [%
+            } %]
+        </ul>
+        
+        <h2>Books Cover Artist For</h2>
+        <ul>
+        [%
+        for (coverBook in artist.booksCoverArtistFor){
+            %]
+            	<li><a href="[%=coverBook.name%].html">[%=coverBook.name%]</a></li>
+            [%
+        } %]
+        </ul>
+        
+        <a href="artists.html">Back</a>

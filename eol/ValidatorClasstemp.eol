@@ -1,0 +1,21 @@
+{
+    {
+        if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};
+        if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};
+        if (p.hasNext()) {",";} else {"";};
+        if (k.hasNext()) {",";} else {"";};
+        if (k.hasNext()) {",";} else {"";};
+        if (genDataType.isMinInclusive()) {">=";} else {">";};
+        if (genDataType.isMinInclusive()) {"true";} else {"false";};
+        if (genDataType.isMinInclusive()) {"true";} else {"false";};
+        if (genDataType.isMinInclusive()) {">=";} else {">";};
+        if (genDataType.isMinInclusive()) {"true";} else {"false";};
+        if (genDataType.isMaxInclusive()) {"<=";} else {"<";};
+        if (genDataType.isMaxInclusive()) {"true";} else {"false";};
+        if (genDataType.isMaxInclusive()) {"true";} else {"false";};
+        if (genDataType.isMaxInclusive()) {"<=";} else {"<";};
+        if (genDataType.isMaxInclusive()) {"true";} else {"false";};
+    }
+
+}
+

@@ -1,0 +1,6 @@
+echo "Testing"
+echo "Compiling"
+javac -cp packages/*:. attemptone.java
+echo "Running"
+java -cp packages/*:src:. attemptone
+

@@ -1,0 +1,15 @@
+{
+    {
+        if (genClass.getProviderBaseClassName() <> null) {genClass.getProviderBaseClassName();} else {genModel.getImportedName("org.eclipse.emf.edit.provider.ItemProviderAdapter");};
+        if (genClass.getProviderBaseClassName() <> null) {genClass.getProviderBaseClassName();} else {genModel.getImportedName("org.eclipse.emf.edit.provider.ItemProviderAdapter");};
+        if (genFeature.getProperty() = GenPropertyKind.EDITABLE_LITERAL) {"true";} else {"false";};
+        if (genFeature.isPropertyMultiLine()) {"true";} else {"false";};
+        if (genFeature.isPropertySortChoices()) {"true";} else {"false";};
+        genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<? extends org.eclipse.emf.ecore.EStructuralFeature>";} else {"java.util.Collection";});
+        genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<java.lang.Object>";} else {"java.util.Collection";});
+        genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<?>";} else {"java.util.Collection";});
+        if (i.hasNext()) {" ||";} else {";";};
+    }
+
+}
+

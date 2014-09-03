@@ -1,0 +1,618 @@
+{
+    {
+        //&&&staticSymbol&&&<%import java.util.*;%>
+        //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
+        //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.impl.Literals;%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
+        //&&&staticSymbol&&&<%
+        /**
+        
+           * Copyright (c) 2002-2007 IBM Corporation and others.
+        
+           * All rights reserved.   This program and the accompanying materials
+        
+           * are made available under the terms of the Eclipse Public License v1.0
+        
+           * which accompanies this distribution, and is available at
+        
+           * http://www.eclipse.org/legal/epl-v10.html
+        
+           *
+        
+           * Contributors:
+        
+           *   IBM - Initial API and implementation
+        
+           */
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        var genEnum = argument;
+        var genPackage = genEnum.getGenPackage();
+        var genModel = genPackage.getGenModel();
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&package <%
+        //&&&staticSymbol&&&=genPackage.getInterfacePackageName()
+        //&&&staticSymbol&&&%>;
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&<%
+        genModel.addImport("java.util.Arrays");
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        genModel.addImport("java.util.List");
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        genModel.addImport("java.util.Collections");
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        genModel.markImportLocation(stringBuffer, genPackage);
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        var isEnum = genModel.useGenerics();
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&/**
+        //&&&staticSymbol&&& * <!-- begin-user-doc -->
+        //&&&staticSymbol&&& * A representation of the literals of the enumeration '<em><b><%
+        //&&&staticSymbol&&&=genEnum.getFormattedName()
+        //&&&staticSymbol&&&%></b></em>',
+        //&&&staticSymbol&&& * and utility methods for working with them.
+        //&&&staticSymbol&&& * <!-- end-user-doc -->
+        //&&&staticSymbol&&&<%
+        if (genEnum.hasDocumentation()) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&& * <!-- begin-model-doc -->
+            //&&&staticSymbol&&& * <%
+            //&&&staticSymbol&&&=genEnum.getDocumentation(genModel.getIndentation(stringBuffer))
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&& * <!-- end-model-doc -->
+            //&&&staticSymbol&&&<%
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&& * @see <%
+        //&&&staticSymbol&&&=genPackage.getQualifiedPackageInterfaceName()
+        //&&&staticSymbol&&&%>#get<%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%>()
+        //&&&staticSymbol&&&<%
+        if (not  genModel.isSuppressEMFModelTags()) {
+            var first = true;
+            for (StringTokenizer stringTokenizer = new StringTokenizer (genEnum.getModelInfo(), "\n\r");
+            stringTokenizer.hasMoreTokens();) {
+                var modelInfo = stringTokenizer.nextToken();
+                if (first) {
+                    first = false;
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&& * @model <%
+                    //&&&staticSymbol&&&=modelInfo
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&&<%
+                } else {
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&& *        <%
+                    //&&&staticSymbol&&&=modelInfo
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&&<%
+                }
+            }
+            if (first) {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&& * @model
+                //&&&staticSymbol&&&<%
+            }
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&& * @generated
+        //&&&staticSymbol&&& */
+        //&&&staticSymbol&&&public <%
+        if (isEnum) {
+            //&&&staticSymbol&&&%>enum<%
+        } else {
+            //&&&staticSymbol&&&%>final class<%
+        }
+        //&&&staticSymbol&&&%> <%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%> <%
+        if (isEnum) {
+            //&&&staticSymbol&&&%>implements<%
+        } else {
+            //&&&staticSymbol&&&%>extends<%
+        }
+        //&&&staticSymbol&&&%> <%
+        //&&&staticSymbol&&&*%%storeSymbol%%*0
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&{
+        //&&&staticSymbol&&&<%
+        if (isEnum) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&  <%
+            if (genEnum.getGenEnumLiterals().isEmpty()) {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&	;
+                //&&&staticSymbol&&&
+                //&&&staticSymbol&&&  <%
+            } else {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&    <%
+                for (Iterator < GenEnumLiteral > l = genEnum.getGenEnumLiterals().iterator(); l.hasNext();) {
+                    var genEnumLiteral = l.next();
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&&	/**
+                    //&&&staticSymbol&&&	 * The '<em><b><%
+                    //&&&staticSymbol&&&=genEnumLiteral.getFormattedName()
+                    //&&&staticSymbol&&&%></b></em>' literal object.
+                    //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+                    //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+                    //&&&staticSymbol&&&	 * @see #<%
+                    //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralValueConstantName()
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&&	 * @generated
+                    //&&&staticSymbol&&&	 * @ordered
+                    //&&&staticSymbol&&&	 */
+                    //&&&staticSymbol&&&	<%
+                    //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralInstanceConstantName()
+                    //&&&staticSymbol&&&%>(<%
+                    //&&&staticSymbol&&&=genEnumLiteral.getValue()
+                    //&&&staticSymbol&&&%>, "<%
+                    //&&&staticSymbol&&&=genEnumLiteral.getName()
+                    //&&&staticSymbol&&&%>", <%
+                    //&&&staticSymbol&&&=Literals.toStringLiteral(genEnumLiteral.getLiteral(), genModel)
+                    //&&&staticSymbol&&&%>)<%
+                    if (l.hasNext()) {
+                        //&&&staticSymbol&&&%>,<%
+                    } else {
+                        //&&&staticSymbol&&&%>;<%
+                    }
+                    //&&&staticSymbol&&&%><%
+                    //&&&staticSymbol&&&=genModel.getNonNLS()
+                    //&&&staticSymbol&&&%><%
+                    //&&&staticSymbol&&&=genModel.getNonNLS(2)
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&&
+                    //&&&staticSymbol&&&    <%
+                }
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&  <%
+            }
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&<%
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        if (genModel.hasCopyrightField()) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	public static final <%
+            //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+            //&&&staticSymbol&&&%> copyright = <%
+            //&&&staticSymbol&&&=genModel.getCopyrightFieldLiteral()
+            //&&&staticSymbol&&&%>;<%
+            //&&&staticSymbol&&&=genModel.getNonNLS()
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&<%
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        for (genEnumLiteral in genEnum.getGenEnumLiterals()){
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * The '<em><b><%
+            //&&&staticSymbol&&&=genEnumLiteral.getFormattedName()
+            //&&&staticSymbol&&&%></b></em>' literal value.
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&<%
+            if (not  genEnumLiteral.hasDocumentation()) {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&	 * <p>
+                //&&&staticSymbol&&&	 * If the meaning of '<em><b><%
+                //&&&staticSymbol&&&=genEnumLiteral.getFormattedName()
+                //&&&staticSymbol&&&%></b></em>' literal object isn't clear,
+                //&&&staticSymbol&&&	 * there really should be more of a description here...
+                //&&&staticSymbol&&&	 * </p>
+                //&&&staticSymbol&&&<%
+            }
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&<%
+            if (genEnumLiteral.hasDocumentation()) {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&	 * <!-- begin-model-doc -->
+                //&&&staticSymbol&&&	 * <%
+                //&&&staticSymbol&&&=genEnumLiteral.getDocumentation(genModel.getIndentation(stringBuffer))
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&	 * <!-- end-model-doc -->
+                //&&&staticSymbol&&&<%
+            }
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	 * @see #<%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralInstanceConstantName()
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&<%
+            if (not  genModel.isSuppressEMFModelTags()) {
+                var first = true;
+                for (StringTokenizer stringTokenizer = new StringTokenizer (genEnumLiteral.getModelInfo(), "\n\r");
+                stringTokenizer.hasMoreTokens();) {
+                    var modelInfo = stringTokenizer.nextToken();
+                    if (first) {
+                        first = false;
+                        //&&&staticSymbol&&&%>
+                        //&&&staticSymbol&&&	 * @model <%
+                        //&&&staticSymbol&&&=modelInfo
+                        //&&&staticSymbol&&&%>
+                        //&&&staticSymbol&&&<%
+                    } else {
+                        //&&&staticSymbol&&&%>
+                        //&&&staticSymbol&&&	 *        <%
+                        //&&&staticSymbol&&&=modelInfo
+                        //&&&staticSymbol&&&%>
+                        //&&&staticSymbol&&&<%
+                    }
+                }
+                if (first) {
+                    //&&&staticSymbol&&&%>
+                    //&&&staticSymbol&&&	 * @model
+                    //&&&staticSymbol&&&<%
+                }
+            }
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 * @ordered
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	public static final int <%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralValueConstantName()
+            //&&&staticSymbol&&&%> = <%
+            //&&&staticSymbol&&&=genEnumLiteral.getValue()
+            //&&&staticSymbol&&&%>;
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&<%
+            ;
+        } //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        if (not  isEnum) for (GenEnumLiteral genEnumLiteral : genEnum.getGenEnumLiterals()) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * The '<em><b><%
+            //&&&staticSymbol&&&=genEnumLiteral.getFormattedName()
+            //&&&staticSymbol&&&%></b></em>' literal object.
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @see #<%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralValueConstantName()
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 * @ordered
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	public static final <%
+            //&&&staticSymbol&&&=genEnum.getName()
+            //&&&staticSymbol&&&%> <%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralInstanceConstantName()
+            //&&&staticSymbol&&&%> = new <%
+            //&&&staticSymbol&&&=genEnum.getName()
+            //&&&staticSymbol&&&%>(<%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralValueConstantName()
+            //&&&staticSymbol&&&%>, "<%
+            //&&&staticSymbol&&&=genEnumLiteral.getName()
+            //&&&staticSymbol&&&%>", <%
+            //&&&staticSymbol&&&=Literals.toStringLiteral(genEnumLiteral.getLiteral(), genModel)
+            //&&&staticSymbol&&&%>);<%
+            //&&&staticSymbol&&&=genModel.getNonNLS()
+            //&&&staticSymbol&&&%><%
+            //&&&staticSymbol&&&=genModel.getNonNLS(2)
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&<%
+        }
+
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&	/**
+        //&&&staticSymbol&&&	 * An array of all the '<em><b><%
+        //&&&staticSymbol&&&=genEnum.getFormattedName()
+        //&&&staticSymbol&&&%></b></em>' enumerators.
+        //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+        //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+        //&&&staticSymbol&&&	 * @generated
+        //&&&staticSymbol&&&	 */
+        //&&&staticSymbol&&&	private static final <%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%>[] VALUES_ARRAY =
+        //&&&staticSymbol&&&		new <%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%>[]
+        //&&&staticSymbol&&&		{
+        //&&&staticSymbol&&&<%
+        for (genEnumLiteral in genEnum.getGenEnumLiterals()){
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&			<%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralInstanceConstantName()
+            //&&&staticSymbol&&&%>,
+            //&&&staticSymbol&&&<%
+            ;
+        } //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&		};
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&	/**
+        //&&&staticSymbol&&&	 * A public read-only list of all the '<em><b><%
+        //&&&staticSymbol&&&=genEnum.getFormattedName()
+        //&&&staticSymbol&&&%></b></em>' enumerators.
+        //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+        //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+        //&&&staticSymbol&&&	 * @generated
+        //&&&staticSymbol&&&	 */
+        //&&&staticSymbol&&&	public static final List<%
+        if (isEnum) {
+            //&&&staticSymbol&&&%><<%=genEnum.getName()%>><%
+        }
+        //&&&staticSymbol&&&%> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&	/**
+        //&&&staticSymbol&&&	 * Returns the '<em><b><%
+        //&&&staticSymbol&&&=genEnum.getFormattedName()
+        //&&&staticSymbol&&&%></b></em>' literal with the specified literal value.
+        //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+        //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+        //&&&staticSymbol&&&	 * @generated
+        //&&&staticSymbol&&&	 */
+        //&&&staticSymbol&&&	public static <%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%> get(<%
+        //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+        //&&&staticSymbol&&&%> literal)
+        //&&&staticSymbol&&&	{
+        //&&&staticSymbol&&&		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+        //&&&staticSymbol&&&		{
+        //&&&staticSymbol&&&			<%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%> result = VALUES_ARRAY[i];
+        //&&&staticSymbol&&&			if (result.toString().equals(literal))
+        //&&&staticSymbol&&&			{
+        //&&&staticSymbol&&&				return result;
+        //&&&staticSymbol&&&			}
+        //&&&staticSymbol&&&		}
+        //&&&staticSymbol&&&		return null;
+        //&&&staticSymbol&&&	}
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&	/**
+        //&&&staticSymbol&&&	 * Returns the '<em><b><%
+        //&&&staticSymbol&&&=genEnum.getFormattedName()
+        //&&&staticSymbol&&&%></b></em>' literal with the specified name.
+        //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+        //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+        //&&&staticSymbol&&&	 * @generated
+        //&&&staticSymbol&&&	 */
+        //&&&staticSymbol&&&	public static <%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%> getByName(<%
+        //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+        //&&&staticSymbol&&&%> name)
+        //&&&staticSymbol&&&	{
+        //&&&staticSymbol&&&		for (int i = 0; i < VALUES_ARRAY.length; ++i)
+        //&&&staticSymbol&&&		{
+        //&&&staticSymbol&&&			<%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%> result = VALUES_ARRAY[i];
+        //&&&staticSymbol&&&			if (result.getName().equals(name))
+        //&&&staticSymbol&&&			{
+        //&&&staticSymbol&&&				return result;
+        //&&&staticSymbol&&&			}
+        //&&&staticSymbol&&&		}
+        //&&&staticSymbol&&&		return null;
+        //&&&staticSymbol&&&	}
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&	/**
+        //&&&staticSymbol&&&	 * Returns the '<em><b><%
+        //&&&staticSymbol&&&=genEnum.getFormattedName()
+        //&&&staticSymbol&&&%></b></em>' literal with the specified integer value.
+        //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+        //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+        //&&&staticSymbol&&&	 * @generated
+        //&&&staticSymbol&&&	 */
+        //&&&staticSymbol&&&	public static <%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%> get(int value)
+        //&&&staticSymbol&&&	{
+        //&&&staticSymbol&&&		switch (value)
+        //&&&staticSymbol&&&		{
+        //&&&staticSymbol&&&<%
+        for (genEnumLiteral in genEnum.getUniqueValuedGenEnumLiterals()){
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&			case <%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralValueConstantName()
+            //&&&staticSymbol&&&%>: return <%
+            //&&&staticSymbol&&&=genEnumLiteral.getEnumLiteralInstanceConstantName()
+            //&&&staticSymbol&&&%>;
+            //&&&staticSymbol&&&<%
+            ;
+        } //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&		}
+        //&&&staticSymbol&&&		return null;
+        //&&&staticSymbol&&&	}
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&<%
+        if (isEnum) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	private final int value;
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	private final <%
+            //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+            //&&&staticSymbol&&&%> name;
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	private final <%
+            //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+            //&&&staticSymbol&&&%> literal;
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&<%
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&	/**
+        //&&&staticSymbol&&&	 * Only this class can construct instances.
+        //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+        //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+        //&&&staticSymbol&&&	 * @generated
+        //&&&staticSymbol&&&	 */
+        //&&&staticSymbol&&&	private <%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%>(int value, <%
+        //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+        //&&&staticSymbol&&&%> name, <%
+        //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+        //&&&staticSymbol&&&%> literal)
+        //&&&staticSymbol&&&	{
+        //&&&staticSymbol&&&<%
+        if (isEnum) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&		this.value = value;
+            //&&&staticSymbol&&&		this.name = name;
+            //&&&staticSymbol&&&		this.literal = literal;
+            //&&&staticSymbol&&&<%
+        } else {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&		super(value, name, literal);
+            //&&&staticSymbol&&&<%
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&	}
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&<%
+        if (isEnum) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	public int getValue()
+            //&&&staticSymbol&&&	{
+            //&&&staticSymbol&&&	  return value;
+            //&&&staticSymbol&&&	}
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	public <%
+            //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+            //&&&staticSymbol&&&%> getName()
+            //&&&staticSymbol&&&	{
+            //&&&staticSymbol&&&	  return name;
+            //&&&staticSymbol&&&	}
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&	public <%
+            //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+            //&&&staticSymbol&&&%> getLiteral()
+            //&&&staticSymbol&&&	{
+            //&&&staticSymbol&&&	  return literal;
+            //&&&staticSymbol&&&	}
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&	/**
+            //&&&staticSymbol&&&	 * Returns the literal value of the enumerator, which is its string representation.
+            //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+            //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+            //&&&staticSymbol&&&	 * @generated
+            //&&&staticSymbol&&&	 */
+            //&&&staticSymbol&&&  <%
+            if (genModel.useClassOverrideAnnotation()) {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&	@Override
+                //&&&staticSymbol&&&  <%
+            }
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&	public <%
+            //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+            //&&&staticSymbol&&&%> toString()
+            //&&&staticSymbol&&&	{
+            //&&&staticSymbol&&&		return literal;
+            //&&&staticSymbol&&&	}
+            //&&&staticSymbol&&&	
+            //&&&staticSymbol&&&<%
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&} //<%
+        //&&&staticSymbol&&&=genEnum.getName()
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        if (genModel.isSuppressEMFMetaData() and not  genModel.isSuppressInterfaces()) {
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&
+            //&&&staticSymbol&&&  <%
+            if (isEnum) {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&/**
+                //&&&staticSymbol&&& * A private implementation interface used to hide the inheritance from Enumerator.
+                //&&&staticSymbol&&& * <!-- begin-user-doc -->
+                //&&&staticSymbol&&& * <!-- end-user-doc -->
+                //&&&staticSymbol&&& * @generated
+                //&&&staticSymbol&&& */
+                //&&&staticSymbol&&&interface Internal<%
+                //&&&staticSymbol&&&=genEnum.getName()
+                //&&&staticSymbol&&&%> extends org.eclipse.emf.common.util.Enumerator
+                //&&&staticSymbol&&&{
+                //&&&staticSymbol&&&	// Empty 
+                //&&&staticSymbol&&&}
+                //&&&staticSymbol&&&  <%
+            } else {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&/**
+                //&&&staticSymbol&&& * A private implementation class to construct the instances.
+                //&&&staticSymbol&&& * <!-- begin-user-doc -->
+                //&&&staticSymbol&&& * <!-- end-user-doc -->
+                //&&&staticSymbol&&& * @generated
+                //&&&staticSymbol&&& */
+                //&&&staticSymbol&&&class Internal<%
+                //&&&staticSymbol&&&=genEnum.getName()
+                //&&&staticSymbol&&&%> extends org.eclipse.emf.common.util.AbstractEnumerator
+                //&&&staticSymbol&&&{
+                //&&&staticSymbol&&&	/**
+                //&&&staticSymbol&&&	 * Only this class can construct instances.
+                //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
+                //&&&staticSymbol&&&	 * <!-- end-user-doc -->
+                //&&&staticSymbol&&&	 * @generated
+                //&&&staticSymbol&&&	 */
+                //&&&staticSymbol&&&	protected Internal<%
+                //&&&staticSymbol&&&=genEnum.getName()
+                //&&&staticSymbol&&&%>(int value, <%
+                //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+                //&&&staticSymbol&&&%> name, <%
+                //&&&staticSymbol&&&=genModel.getImportedName("java.lang.String")
+                //&&&staticSymbol&&&%> literal)
+                //&&&staticSymbol&&&	{
+                //&&&staticSymbol&&&		super(value, name, literal);
+                //&&&staticSymbol&&&	}
+                //&&&staticSymbol&&&}
+                //&&&staticSymbol&&&  <%
+            }
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&<%
+        }
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        genModel.emitSortedImports();
+        //&&&staticSymbol&&&%>
+    }
+
+}
+

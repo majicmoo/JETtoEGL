@@ -1,0 +1,56 @@
+Current errors
+
+
+************************************
+ERROR 1
+ItemProviderAdapterFactory
+line 666 of ./java/ItemProviderAdapterFactory.java - Syntax error at or near:
+	List < GenClass . ChildCreationData >>> >> <<< > packageEntry : genPackage .
+************************************	
+Notes:
+Iterator 
+
+
+
+************************************
+ERROR 2
+./java/appengine-web.java ...
+[./java/appengine-web.java, Txl/java.Txl] : TXL0192E line 1 of ./java/appengine-web.java - Syntax error at or near:
+	class appengine >>> - <<< web { public static void 
+TXL v10.6a-64 (14.7.13) (c) 1988-2013 Queen's University at Kingston
+************************************
+Notes:
+
+
+
+
+************************************
+ERROR 3
+Parsing ./java/Class.java ...
+[./java/Class.java, Txl/java.Txl] : TXL0127E input file './java/Class.java' - Parse time limit (26600000 cycles) exceeded
+[./java/Class.java, Txl/java.Txl] : TXL0192E line 1140 of ./java/Class.java - Syntax error at or near:
+	== null ? Collections . >>> < <<< GenFeature > emptyList ( ) 
+************************************
+Notes: Conditional statement
+
+On this bit of code:
+
+List<GenFeature> classExtendsAllGenFeatures = classExtendsGenClass== null? Collections.<GenFeature>emptyList() : classExtendsGenClass.getAllGenFeatures();%>
+
+	
+************************************	
+ERROR 4
+Parsing ./java/PackageClass.java ...
+[./java/PackageClass.java, Txl/java.Txl] : TXL0127E input file './java/PackageClass.java' - Parse time limit (26600000 cycles) exceeded
+[./java/PackageClass.java, Txl/java.Txl] : TXL0192E line 2601 of ./java/PackageClass.java - Syntax error at or near:
+	Entry < String , String >>> >> <<< k = eAnnotation . getDetails 
+	
+	
+************************************	
+ERROR 5
+Parsing ./java/ValidatorClass.java ...
+[./java/ValidatorClass.java, Txl/java.Txl] : TXL0127E input file './java/ValidatorClass.java' - Parse time limit (26600000 cycles) exceeded
+[./java/ValidatorClass.java, Txl/java.Txl] : TXL0192E line 605 of ./java/ValidatorClass.java - Syntax error at or near:
+	Iterator < List < String >>> >> <<< k = genDataType . getPatterns 
+TXL v10.6a-64 (14.7.13) (c) 1988-2013 Queen's University at Kingston
+

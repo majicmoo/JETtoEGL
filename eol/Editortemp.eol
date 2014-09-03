@@ -1,0 +1,8 @@
+{
+    {
+        "List" + (if (genModel.useGenerics()) {"<URI>";} else {"";});
+        if (genModel.useGenerics()) {"";} else {"(URI)";};
+    }
+
+}
+

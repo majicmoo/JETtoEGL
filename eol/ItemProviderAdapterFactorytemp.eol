@@ -1,0 +1,11 @@
+{
+    {
+        genModel.getImportedName(if (useGenerics) {"java.util.List<org.eclipse.emf.edit.provider.IChildCreationExtender>";} else {"java.util.List";});
+        genModel.getImportedName(if (useGenerics) {"java.util.Collection<?>";} else {"java.util.Collection";});
+        if (useGenerics) {"<Object>";} else {"";};
+        genModel.getImportedName(if (useGenerics) {"java.util.List<Object>";} else {"java.util.List";});
+        genModel.getImportedName(if (useGenerics) {"java.util.List<Object>";} else {"java.util.List";});
+    }
+
+}
+

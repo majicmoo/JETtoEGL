@@ -1,0 +1,34 @@
+
+
+        
+<h1>AmyA</h1>
+        
+        <h2>Books Artist For</h2>
+        <ul>
+            	<li><a href="HulkVol1.html">HulkVol1</a></li>
+            	<li><a href="HulkVol2.html">HulkVol2</a></li>
+        </ul>
+        
+        <h2>Books Cover Artist For</h2>
+        <ul>
+            	<li><a href="HulkVol2.html">HulkVol2</a></li>
+        </ul>
+        
+        <a href="artists.html">Back</a>
+
+
+        
+<h1>Dan</h1>
+        
+        <h2>Books Artist For</h2>
+        <ul>
+            	<li><a href="HulkVol1.html">HulkVol1</a></li>
+        </ul>
+        
+        <h2>Books Cover Artist For</h2>
+        <ul>
+            	<li><a href="HulkVol1.html">HulkVol1</a></li>
+        </ul>
+        
+        <a href="artists.html">Back</a>
+

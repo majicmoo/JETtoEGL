@@ -1,0 +1,9 @@
+{
+    {
+        if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EPackage");} else {genPackage.getPackageInterfaceName();};
+        if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EFactory");} else {genPackage.getFactoryInterfaceName();};
+        if (genModel.isSuppressEMFMetaData()) {"EFactoryInstance";} else {genPackage.getFactoryName();};
+    }
+
+}
+
