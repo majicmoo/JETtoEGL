@@ -39,11 +39,10 @@ usedNames.add(genTypeParameter.getName());
 ;
 };
 } templateParameterName = "T";
-for (int i = 1;
-usedNames.contains(templateParameterName); ++ i) {
+int i = 1;
+while (usedNames.contains(templateParameterName);) {{
 templateParameterName = "T" + i;
-}
-}%]
+} ++ i;}}%]
 [%String templateParameters = if (genModel.useGenerics()) {"<" + templateParameterName + ">";} else {"";};%]
 [%String returnType = if (genModel.useGenerics()) {templateParameterName;} else {genModel.getImportedName("java.lang.Object");};%]
 [%genModel.markImportLocation(stringBuffer);%]

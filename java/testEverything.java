@@ -34,6 +34,14 @@ for (int item : numbers) {
     a = item;
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&
+//&&&staticSymbol&&&<%
+ for (int x = 0; x < items.size(); x++){
+        a = 10;
+        a = 6;
+        a = 7;
+    }
+//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&

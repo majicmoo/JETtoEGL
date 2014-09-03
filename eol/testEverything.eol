@@ -36,6 +36,14 @@
             a = item;
             ;
         } //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&<%
+        int x = 0;
+        while (x < items.size();) {{
+            a = 10;
+            a = 6;
+            a = 7;
+        } x = x + 1;} //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&    
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&

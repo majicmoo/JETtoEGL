@@ -65,7 +65,7 @@
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&<%
         var first = true;
-        for (Iterator < String > i = sourceFolders.iterator(); i.hasNext();) {
+        Iterator < String > i = sourceFolders.iterator(); while (i.hasNext();) {{
             var sourceFolder = i.next();
             if (i.hasNext()) {
                 sourceFolder += ",\\";
@@ -83,8 +83,7 @@
                 //&&&staticSymbol&&&=sourceFolder
                 //&&&staticSymbol&&&%><%
             }
-        }
-        //&&&staticSymbol&&&%>
+        };} //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&output.<%
         //&&&staticSymbol&&&=pluginClassesLocation
         //&&&staticSymbol&&&%> = bin/

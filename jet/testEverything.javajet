@@ -1,0 +1,35 @@
+<%@ jet package="blerg" class="testEverything" imports="testing.*  abc.* iasdoh.*"%>
+
+Do While
+<%int count = 1; %>
+<%do {
+            System.out.println("Count is: " + count);
+            count++;
+        } while (count < 11);%>
+
+
+If
+
+<%if (month == 8) {
+    month = 7;
+} else {
+    month = 9;
+} %>
+
+For loop
+<%int a = 0;
+int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+for (int item : numbers) {
+    a = item;
+}%>
+
+<% for (int x = 0; x < items.size(); x++){
+        a = 10;
+        a = 6;
+        a = 7;
+    }%>
+    
+
+
+
+

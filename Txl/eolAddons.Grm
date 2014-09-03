@@ -112,6 +112,7 @@ redefine statement
 
     |   [empty_statement]
     |   [do_stmt]
+    |   [for_to_while_stmt]
 end define
 
 redefine assignment_expression
@@ -127,8 +128,13 @@ define if_stmt
     '}
 end define
 
-
-
+define for_to_while_stmt
+    [for_init]
+    'while( [for_expression] ')'{
+    [statement]
+    [for_update]';}
+    
+end define
 
 redefine method_argument	
 	[SPOFF] '( [SPON] [list argument] ')   

@@ -23,6 +23,7 @@ function java2eol
 	[removeMainFunction]
 	[transformForIn]
 	[transformConditionalStatement]
+	[trasformForToWhile]
 	%[transformTypeDeclaration]
 	[transformOps]
 	[transformBooleanOps]
@@ -223,7 +224,18 @@ rule transformConditionalStatement
     '}
 end rule
     
-
+rule trasformForToWhile
+    replace [statement]
+    'for '( init [for_init] expr [for_expression] update [for_update] ')
+        stmt [statement] 
+    by
+    init
+    'while( expr ')'{
+    stmt
+    update ';}
+end rule
+    
+    
 
 %% Remove class
 rule removeClass

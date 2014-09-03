@@ -41,9 +41,9 @@ public class [%=genClass.getProviderClassName()%] [%if (genClass.getProviderImpl
 [%if (notgenClass.getProviderImplementsClassNames().isEmpty()) {%]
 extends [%=if (genClass.getProviderBaseClassName() <> null) {genClass.getProviderBaseClassName();} else {genModel.getImportedName("org.eclipse.emf.edit.provider.ItemProviderAdapter");};%]%]
 implements
-[%for (Iterator < String > i = genClass.getProviderImplementsClassNames().iterator(); i.hasNext();) {%]
+[%Iterator < String > i = genClass.getProviderImplementsClassNames().iterator(); while (i.hasNext();) {{%]
 [%=genModel.getImportedName(i.next())%][%if (i.hasNext()) {%],[%}%]
-[%}%]
+[%};} %]
 [%}%]
 {
 [%if (genModel.hasCopyrightField()) {%]
@@ -122,13 +122,13 @@ getString("[%=genModel.getPropertyCategoryKey(genFeature.getPropertyCategory())%
 null));
 [%} else {%]
 new String[] {
-[%for (Iterator < String > j = genFeature.getPropertyFilterFlags().iterator(); j.hasNext();) {
+[%Iterator < String > j = genFeature.getPropertyFilterFlags().iterator(); while (j.hasNext();) {{
 var filterFlag = j.next();%]
 [%if (filterFlag <> null and filterFlag.length() > 0) {%]
 "[%=filterFlag%]"[%if (j.hasNext()) {%],[%}%][%=genModel.getNonNLS()
 %]
 [%}%]
-[%}%]
+[%};} %]
 }));
 [%}%]
 [%@ end %][%//ItemProvider/addPropertyDescriptor.override.javajetinc%]
@@ -503,10 +503,10 @@ childObject = entry.getValue();
 }
 [%}%]
 boolean qualify =
-[%for (Iterator < GenFeature > i = genClass.getSharedClassCreateChildFeatures().iterator(); i.hasNext();) {
+[%Iterator < GenFeature > i = genClass.getSharedClassCreateChildFeatures().iterator(); while (i.hasNext();) {{
 var createFeature = i.next();%]
 childFeature == [%=createFeature.getQualifiedFeatureAccessor()%][%=if (i.hasNext()) {" ||";} else {";";};%]%]
-[%}%]
+[%};} %]
 if (qualify)
 {
 return getString

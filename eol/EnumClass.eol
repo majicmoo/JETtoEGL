@@ -76,8 +76,8 @@
         //&&&staticSymbol&&&<%
         if (not  genModel.isSuppressEMFModelTags()) {
             var first = true;
-            for (StringTokenizer stringTokenizer = new StringTokenizer (genEnum.getModelInfo(), "\n\r");
-            stringTokenizer.hasMoreTokens();) {
+            StringTokenizer stringTokenizer = new StringTokenizer (genEnum.getModelInfo(), "\n\r");
+            while (stringTokenizer.hasMoreTokens();) {{
                 var modelInfo = stringTokenizer.nextToken();
                 if (first) {
                     first = false;
@@ -93,8 +93,7 @@
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&<%
                 }
-            }
-            if (first) {
+            };} if (first) {
                 //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&& * @model
                 //&&&staticSymbol&&&<%
@@ -133,7 +132,7 @@
             } else {
                 //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&    <%
-                for (Iterator < GenEnumLiteral > l = genEnum.getGenEnumLiterals().iterator(); l.hasNext();) {
+                Iterator < GenEnumLiteral > l = genEnum.getGenEnumLiterals().iterator(); while (l.hasNext();) {{
                     var genEnumLiteral = l.next();
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&	/**
@@ -169,8 +168,7 @@
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&
                     //&&&staticSymbol&&&    <%
-                }
-                //&&&staticSymbol&&&%>
+                };} //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&  <%
             }
             //&&&staticSymbol&&&%>
@@ -234,8 +232,8 @@
             //&&&staticSymbol&&&<%
             if (not  genModel.isSuppressEMFModelTags()) {
                 var first = true;
-                for (StringTokenizer stringTokenizer = new StringTokenizer (genEnumLiteral.getModelInfo(), "\n\r");
-                stringTokenizer.hasMoreTokens();) {
+                StringTokenizer stringTokenizer = new StringTokenizer (genEnumLiteral.getModelInfo(), "\n\r");
+                while (stringTokenizer.hasMoreTokens();) {{
                     var modelInfo = stringTokenizer.nextToken();
                     if (first) {
                         first = false;
@@ -251,8 +249,7 @@
                         //&&&staticSymbol&&&%>
                         //&&&staticSymbol&&&<%
                     }
-                }
-                if (first) {
+                };} if (first) {
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&	 * @model
                     //&&&staticSymbol&&&<%

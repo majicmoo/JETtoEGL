@@ -84,7 +84,7 @@
             //&&&staticSymbol&&&%>
             //&&&staticSymbol&&&	implements
             //&&&staticSymbol&&&  <%
-            for (Iterator < String > i = genClass.getProviderImplementsClassNames().iterator(); i.hasNext();) {
+            Iterator < String > i = genClass.getProviderImplementsClassNames().iterator(); while (i.hasNext();) {{
                 //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&		<%
                 //&&&staticSymbol&&&=genModel.getImportedName(i.next())
@@ -94,8 +94,7 @@
                 }
                 //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&  <%
-            }
-            //&&&staticSymbol&&&%>
+            };} //&&&staticSymbol&&&%>
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
@@ -277,7 +276,7 @@
                 //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&				 new String[] {
                 //&&&staticSymbol&&&    <%
-                for (Iterator < String > j = genFeature.getPropertyFilterFlags().iterator(); j.hasNext();) {
+                Iterator < String > j = genFeature.getPropertyFilterFlags().iterator(); while (j.hasNext();) {{
                     var filterFlag = j.next();
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&      <%
@@ -296,8 +295,7 @@
                     }
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&    <%
-                }
-                //&&&staticSymbol&&&%>
+                };} //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&				 }));
                 //&&&staticSymbol&&&  <%
             }
@@ -1318,7 +1316,7 @@
                 //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&		boolean qualify =
                 //&&&staticSymbol&&&    <%
-                for (Iterator < GenFeature > i = genClass.getSharedClassCreateChildFeatures().iterator(); i.hasNext();) {
+                Iterator < GenFeature > i = genClass.getSharedClassCreateChildFeatures().iterator(); while (i.hasNext();) {{
                     var createFeature = i.next();
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&			childFeature == <%
@@ -1327,8 +1325,7 @@
                     //&&&staticSymbol&&&*%%storeSymbol%%*8
                     //&&&staticSymbol&&&%>
                     //&&&staticSymbol&&&    <%
-                }
-                //&&&staticSymbol&&&%>
+                };} //&&&staticSymbol&&&%>
                 //&&&staticSymbol&&&
                 //&&&staticSymbol&&&		if (qualify)
                 //&&&staticSymbol&&&		{

@@ -79,11 +79,10 @@
                     ;
                 };
             } templateParameterName = "T";
-            for (int i = 1;
-            usedNames.contains(templateParameterName); ++ i) {
+            int i = 1;
+            while (usedNames.contains(templateParameterName);) {{
                 templateParameterName = "T" + i;
-            }
-        }
+            } ++ i;}}
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&<%
         String templateParameters = if (genModel.useGenerics()) {"<" + templateParameterName + ">";} else {"";};
