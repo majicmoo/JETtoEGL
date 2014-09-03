@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<comicBooks:ComicBookCollection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:comicBooks="comicBooks" xmi:id="_y6SkAAKtEeS2Gc6AUctxDA">
+  <books xmi:id="_zlfdIAKtEeS2Gc6AUctxDA" name="HulkVol1" publicationDate="1995" artists="_0CF5kAKtEeS2Gc6AUctxDA _IHaCAAKuEeS2Gc6AUctxDA" editors="_0ZEPIAKtEeS2Gc6AUctxDA" writers="_Ib2A8AKuEeS2Gc6AUctxDA" coverArtist="_IHaCAAKuEeS2Gc6AUctxDA" publisher="_0uklEAKtEeS2Gc6AUctxDA" seriesPartOf="_1NZPEAKtEeS2Gc6AUctxDA"/>
+  <books xmi:id="_62-GsAKtEeS2Gc6AUctxDA" name="HulkVol2" publicationDate="2000" artists="_0CF5kAKtEeS2Gc6AUctxDA" editors="_Iz8X4AKuEeS2Gc6AUctxDA" writers="_1nMPIAKtEeS2Gc6AUctxDA _Ib2A8AKuEeS2Gc6AUctxDA" coverArtist="_0CF5kAKtEeS2Gc6AUctxDA" publisher="_0uklEAKtEeS2Gc6AUctxDA" seriesPartOf="_1NZPEAKtEeS2Gc6AUctxDA"/>
+  <artists xmi:id="_0CF5kAKtEeS2Gc6AUctxDA" name="AmyA" booksArtistFor="_zlfdIAKtEeS2Gc6AUctxDA _62-GsAKtEeS2Gc6AUctxDA" booksCoverArtistFor="_62-GsAKtEeS2Gc6AUctxDA"/>
+  <artists xmi:id="_IHaCAAKuEeS2Gc6AUctxDA" name="Dan" booksArtistFor="_zlfdIAKtEeS2Gc6AUctxDA" booksCoverArtistFor="_zlfdIAKtEeS2Gc6AUctxDA"/>
+  <editors xmi:id="_0ZEPIAKtEeS2Gc6AUctxDA" name="Bob" booksEditorFor="_zlfdIAKtEeS2Gc6AUctxDA"/>
+  <editors xmi:id="_Iz8X4AKuEeS2Gc6AUctxDA" name="James" booksEditorFor="_62-GsAKtEeS2Gc6AUctxDA"/>
+  <writers xmi:id="_1nMPIAKtEeS2Gc6AUctxDA" name="Alice" booksWriterFor="_62-GsAKtEeS2Gc6AUctxDA"/>
+  <writers xmi:id="_Ib2A8AKuEeS2Gc6AUctxDA" name="Kate" booksWriterFor="_62-GsAKtEeS2Gc6AUctxDA _zlfdIAKtEeS2Gc6AUctxDA"/>
+  <publishingCompanies xmi:id="_0uklEAKtEeS2Gc6AUctxDA" publishersName="Marvel" booksPublished="_zlfdIAKtEeS2Gc6AUctxDA _62-GsAKtEeS2Gc6AUctxDA"/>
+  <series xmi:id="_1NZPEAKtEeS2Gc6AUctxDA" seriesName="Hulk" booksInSeries="_zlfdIAKtEeS2Gc6AUctxDA _62-GsAKtEeS2Gc6AUctxDA"/>
+</comicBooks:ComicBookCollection>
