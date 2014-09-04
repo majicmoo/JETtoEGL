@@ -60,7 +60,7 @@ def main(fname):
             writeToFile(file_destination, line)
         
         elif "}}.run();" in line:
-            line = line.replace("}.run();", "")
+            line = line.replace("}}.run();", "")
             writeToFile(file_destination, line)
         else:
             if "=" in line:

@@ -1065,7 +1065,7 @@ if (genModel.useClassOverrideAnnotation()) {
 if (isImplementation) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
- GenClass classExtendsGenClass = genClass.getClassExtendsGenClass(); List<GenFeature> classExtendsAllGenFeatures = classExtendsGenClass == null? Collections.<GenFeature>emptyList() : classExtendsGenClass.getAllGenFeatures();
+ GenClass classExtendsGenClass = genClass.getClassExtendsGenClass(); List<GenFeature> classExtendsAllGenFeatures = classExtendsGenClass == null? Collections.emptyList() : classExtendsGenClass.getAllGenFeatures();
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 for (GenFeature genFeature : genClass.getReifiedGenFeatures()) {
@@ -1342,7 +1342,7 @@ if (genClass.hasCollidingSetAccessorOperation(genFeature)) {
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-}}}
+}}
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 
@@ -4716,7 +4716,7 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 }//for
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-}
+
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 for (GenOperation genOperation : (isImplementation ? genClass.getImplementedGenOperations() : genClass.getDeclaredGenOperations())) {
