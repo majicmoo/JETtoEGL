@@ -5,7 +5,6 @@
         //&&&staticSymbol&&&<%import java.util.*;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.ecore.EStructuralFeature;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.ecore.util.*;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -32,6 +31,7 @@
         var genModel = genPackage.getGenModel();
         var extendedMetaData = genModel.getExtendedMetaData();
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&package <%
         //&&&staticSymbol&&&=genPackage.getUtilitiesPackageName()
         //&&&staticSymbol&&&%>;

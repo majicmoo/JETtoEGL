@@ -3,7 +3,6 @@
         //&&&staticSymbol&&&<%import java.util.*;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.impl.Literals;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -30,6 +29,7 @@
         var genPackage = genEnum.getGenPackage();
         var genModel = genPackage.getGenModel();
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&package <%
         //&&&staticSymbol&&&=genPackage.getInterfacePackageName()
         //&&&staticSymbol&&&%>;

@@ -1,7 +1,6 @@
 class ActionBarContributor {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -45,6 +44,7 @@ if (genModel.isCreationCommands())
 }
 
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getPresentationPackageName()
 //&&&staticSymbol&&&%>;

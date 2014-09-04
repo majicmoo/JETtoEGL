@@ -1,5 +1,4 @@
 [%import org.eclipse.emf.codegen.ecore.genmodel.*;%]
-[%include("../Header.javajetinc");%]
 [%/**
 * Copyright (c) 2002-2004 IBM Corporation and others.
 * All rights reserved.   This program and the accompanying materials
@@ -11,6 +10,7 @@
 *   IBM - Initial API and implementation
 */%]
 [%var genModel = argument;%]
+[%include("../Header.javajetinc");%]
 package [%=genModel.getModelPluginPackageName()%];
 [%genModel.addImport("org.eclipse.emf.common.EMFPlugin");%]
 [%genModel.addImport("org.eclipse.emf.common.util.ResourceLocator");%]

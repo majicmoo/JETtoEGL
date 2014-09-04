@@ -2,7 +2,6 @@ class build {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
 //&&&staticSymbol&&&<%import java.util.*;%>
-//&&&staticSymbol&&&<%include("../Header.propertiesjetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -26,6 +25,7 @@ String pluginClassesLocation = genModel.isRuntimeJar() ? genModel.getModelPlugin
 //&&&staticSymbol&&&<%
 List<String> sourceFolders = genModel.getModelSourceFolders();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.propertiesjetinc");%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&bin.includes = <%
 //&&&staticSymbol&&&=pluginClassesLocation

@@ -3,58 +3,6 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.util.CodeGenUtil;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicSetGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/eIsSet.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/getGenFeature.pre.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicUnsetGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/eUnset.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/setGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicSetGenFeature.pre.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genOperation.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genOperation.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genOperation.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/isSetGenFeature.javadoc.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicUnsetGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/unsetGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/getGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/isSetGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/setGenFeature.post.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/getGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicSetGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/getGenFeature.javadoc.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/setGenFeature.javadoc.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/implementedGenOperation.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/setGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/setGenFeature.pre.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicSetGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/reflectiveDelegation.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicGetGenFeature.pre.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/declaredFieldGenFeature.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/unsetGenFeature.javadoc.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/getGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/unsetGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicSetGenFeature.post.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/declaredFieldGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/isSetGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/getGenFeature.javadoc.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/unsetGenFeature.javadoc.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/setGenFeature.javadoc.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/unsetGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/interface.javadoc.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicGetGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicGetGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genOperation.javadoc.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/isSetGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/isSetGenFeature.javadoc.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genFeatureReified.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/setGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicGetGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genOperation.javadoc.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/genFeature.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("Class/basicUnsetGenFeature.override.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -99,6 +47,7 @@ final String negativeOperationOffsetCorrection = genClass.hasOffsetCorrection() 
 //&&&staticSymbol&&&<%
 final String positiveOperationOffsetCorrection = genClass.hasOffsetCorrection() ? " + EOPERATION_OFFSET_CORRECTION" : "";
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 if (isInterface) {
 //&&&staticSymbol&&&%>
@@ -124,9 +73,6 @@ if (isImplementation) { genClass.addClassPsuedoImports(); }
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 if (isInterface) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&/**
 //&&&staticSymbol&&& * <!-- begin-user-doc -->
@@ -219,11 +165,6 @@ if (genClass.needsRootExtendsInterfaceExtendsTag()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&& * @generated
 //&&&staticSymbol&&& */
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/interface.javadoc.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 } else {
 //&&&staticSymbol&&&%>
@@ -489,9 +430,6 @@ if (genFeature.getQualifiedListItemType(genClass).contains("<") || genFeature.ge
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 for (GenFeature genFeature : genClass.getDeclaredFieldGenFeatures()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 if (genFeature.hasSettingDelegate()) {
@@ -944,11 +882,6 @@ if (isGWT) {
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/declaredFieldGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
@@ -1089,9 +1022,6 @@ if (genModel.useClassOverrideAnnotation()) {
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 if (isImplementation && (genModel.getFeatureDelegation() == GenDelegationKind.REFLECTIVE_LITERAL || genModel.isDynamicDelegation()) && (genClass.getClassExtendsGenClass() == null || (genClass.getClassExtendsGenClass().getGenModel().getFeatureDelegation() != GenDelegationKind.REFLECTIVE_LITERAL && !genClass.getClassExtendsGenClass().getGenModel().isDynamicDelegation()))) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
@@ -1132,11 +1062,6 @@ if (genModel.useClassOverrideAnnotation()) {
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/reflectiveDelegation.override.javajetinc
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 if (isImplementation) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
@@ -1144,9 +1069,6 @@ if (isImplementation) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 for (GenFeature genFeature : genClass.getReifiedGenFeatures()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 if (genModel.isArrayAccessors() && genFeature.isListType() && !genFeature.isFeatureMapType() && !genFeature.isMapType()) { String arrayElementType = genFeature.getArrayItemType(genClass);
@@ -1420,11 +1342,6 @@ if (genClass.hasCollidingSetAccessorOperation(genFeature)) {
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/genFeatureReified.override.javajetinc
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 }}}
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
@@ -1432,9 +1349,6 @@ if (genClass.hasCollidingSetAccessorOperation(genFeature)) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 for (GenFeature genFeature : (isImplementation ? genClass.getImplementedGenFeatures() : genClass.getDeclaredGenFeatures())) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 if (genModel.isArrayAccessors() && genFeature.isListType() && !genFeature.isFeatureMapType() && !genFeature.isMapType()) { String arrayElementType = genFeature.getArrayItemType(genClass);
@@ -1678,13 +1592,7 @@ if (!isImplementation) {
 if (genFeature.isGet() && (isImplementation || !genFeature.isSuppressedGetVisibility())) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 if (isInterface) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * Returns the value of the '<em><b><%
@@ -1896,11 +1804,6 @@ if (!genModel.isSuppressEMFModelTags()) { boolean first = true; for (StringToken
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	 * @generated
 //&&&staticSymbol&&&	 */
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/getGenFeature.javadoc.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 } else {
 //&&&staticSymbol&&&%>
@@ -2479,9 +2382,6 @@ if (!isJDK50 && genFeature.isPrimitiveType()) {
 //&&&staticSymbol&&&      <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method to return the '<%
 //&&&staticSymbol&&&=genFeature.getFormattedName()
 //&&&staticSymbol&&&%>' <%
@@ -2505,11 +2405,6 @@ if (genFeature.isMapType()) {
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/getGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&      <%
 }
 //&&&staticSymbol&&&%>
@@ -2521,19 +2416,11 @@ if (genFeature.isMapType()) {
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/getGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 if (isImplementation && !genModel.isReflectiveDelegation() && genFeature.isBasicGet()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
@@ -2656,9 +2543,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&    <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method to return the '<%
 //&&&staticSymbol&&&=genFeature.getFormattedName()
 //&&&staticSymbol&&&%>' <%
@@ -2667,29 +2551,16 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&		// -> do not perform proxy resolution
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/basicGetGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/basicGetGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 if (isImplementation && !genModel.isReflectiveDelegation() && genFeature.isBasicSet()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
@@ -2943,9 +2814,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&    <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method to set the contained '<%
 //&&&staticSymbol&&&=genFeature.getFormattedName()
 //&&&staticSymbol&&&%>' <%
@@ -2956,21 +2824,11 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&		// -> return msgs, after adding any generated Notification to it (if it is null, a NotificationChain object must be created first)
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/basicSetGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/basicSetGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
@@ -2978,13 +2836,7 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 if (genFeature.isSet() && (isImplementation || !genFeature.isSuppressedSetVisibility())) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 if (isInterface) { 
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * Sets the value of the '{@link <%
@@ -3041,11 +2893,6 @@ if (!genFeature.isSuppressedUnsetVisibility()) {
 //&&&staticSymbol&&&%>()
 //&&&staticSymbol&&&	 * @generated
 //&&&staticSymbol&&&	 */
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/setGenFeature.javadoc.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 } else {
 //&&&staticSymbol&&&%>
@@ -3824,9 +3671,6 @@ if (!isJDK50 && genFeature.isPrimitiveType()) {
 //&&&staticSymbol&&&    <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method to set the '<%
 //&&&staticSymbol&&&=genFeature.getFormattedName()
 //&&&staticSymbol&&&%>' <%
@@ -3834,11 +3678,6 @@ if (!isJDK50 && genFeature.isPrimitiveType()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/setGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
@@ -3847,19 +3686,11 @@ if (!isJDK50 && genFeature.isPrimitiveType()) {
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/setGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 if (isImplementation && !genModel.isReflectiveDelegation() && genFeature.isBasicUnset()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
@@ -4035,9 +3866,6 @@ if (genModel.isVirtualDelegation()) {
 //&&&staticSymbol&&&    <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method to unset the contained '<%
 //&&&staticSymbol&&&=genFeature.getFormattedName()
 //&&&staticSymbol&&&%>' <%
@@ -4048,21 +3876,11 @@ if (genModel.isVirtualDelegation()) {
 //&&&staticSymbol&&&		// -> return msgs, after adding any generated Notification to it (if it is null, a NotificationChain object must be created first)
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/basicUnsetGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class.basicUnsetGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
@@ -4070,13 +3888,7 @@ if (genModel.isVirtualDelegation()) {
 if (genFeature.isUnset() && (isImplementation || !genFeature.isSuppressedUnsetVisibility())) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 if (isInterface) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * Unsets the value of the '{@link <%
@@ -4115,11 +3927,6 @@ if (!genFeature.isListType() && !genFeature.isSuppressedSetVisibility()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	 * @generated
 //&&&staticSymbol&&&	 */
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/unsetGenFeature.javadoc.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 } else {
 //&&&staticSymbol&&&%>
@@ -4662,9 +4469,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&    <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method to unset the '<%
 //&&&staticSymbol&&&=genFeature.getFormattedName()
 //&&&staticSymbol&&&%>' <%
@@ -4672,11 +4476,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/unsetGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
@@ -4685,11 +4484,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/unsetGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
@@ -4697,13 +4491,7 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 if (genFeature.isIsSet() && (isImplementation || !genFeature.isSuppressedIsSetVisibility())) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 if (isInterface) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * Returns whether the value of the '{@link <%
@@ -4747,11 +4535,6 @@ if (!genFeature.isListType() && genFeature.isChangeable() && !genFeature.isSuppr
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	 * @generated
 //&&&staticSymbol&&&	 */
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/isSetGenFeature.javadoc.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 } else {
 //&&&staticSymbol&&&%>
@@ -4911,9 +4694,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&    <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method to return whether the '<%
 //&&&staticSymbol&&&=genFeature.getFormattedName()
 //&&&staticSymbol&&&%>' <%
@@ -4921,11 +4701,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&%> is set
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/isSetGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
@@ -4934,18 +4709,8 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/isSetGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/genFeature.override.javajetinc
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 }//for
@@ -4955,9 +4720,6 @@ if (delegateFeature.isWrappedFeatureMapType()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 for (GenOperation genOperation : (isImplementation ? genClass.getImplementedGenOperations() : genClass.getDeclaredGenOperations())) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 if (isImplementation) {
@@ -5033,9 +4795,6 @@ if (genOperation.isInvariant() && genOperation.hasInvariantExpression()) {
 //&&&staticSymbol&&&<%
 if (isInterface) {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
 //&&&staticSymbol&&&	 * <!-- end-user-doc -->
@@ -5109,11 +4868,6 @@ if (!genModel.isSuppressEMFModelTags()) { boolean first = true; for (StringToken
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	 * @generated
 //&&&staticSymbol&&&	 */
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/genOperation.javadoc.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 } else {
 //&&&staticSymbol&&&%>
@@ -5335,17 +5089,9 @@ if (!isJDK50 && genOperation.isPrimitiveType()) {
 //&&&staticSymbol&&&  <%
 } else {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this method
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		throw new UnsupportedOperationException();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/implementedGenOperation.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 }
 //&&&staticSymbol&&&%>
@@ -5353,11 +5099,6 @@ if (!isJDK50 && genOperation.isPrimitiveType()) {
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 }
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/implementedGenOperation.override.javajetinc
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 }//for
@@ -6044,9 +5785,6 @@ if (genModel.isMinimalReflectiveMethods()) {
 //&&&staticSymbol&&&<%
 if (isImplementation && !genModel.isReflectiveDelegation() && genClass.implementsAny(genClass.getEUnsetGenFeatures())) {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
 //&&&staticSymbol&&&	 * <!-- end-user-doc -->
@@ -6141,18 +5879,10 @@ if (genModel.isMinimalReflectiveMethods()) {
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/eUnset.override.javajetinc
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 if (isImplementation && !genModel.isReflectiveDelegation() && genClass.implementsAny(genClass.getEIsSetGenFeatures())) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	/**
 //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
@@ -6511,11 +6241,6 @@ if (genModel.isMinimalReflectiveMethods()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//Class/eIsSet.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>

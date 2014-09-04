@@ -1,7 +1,6 @@
 {
     {
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -27,6 +26,7 @@
         var genPackage = argument;
         var genModel = genPackage.getGenModel();
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&package <%
         //&&&staticSymbol&&&=genPackage.getUtilitiesPackageName()
         //&&&staticSymbol&&&%>;

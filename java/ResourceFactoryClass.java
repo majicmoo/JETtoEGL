@@ -1,8 +1,6 @@
 class ResourceFactoryClass {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
-//&&&staticSymbol&&&<%include("ResourceFactoryClass/createResource.override.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -20,6 +18,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenPackage genPackage = (GenPackage)argument; GenModel genModel=genPackage.getGenModel();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getUtilitiesPackageName()
 //&&&staticSymbol&&&%>;
@@ -148,9 +147,6 @@ if (genModel.useClassOverrideAnnotation()) {
 //&&&staticSymbol&&&	public Resource createResource(URI uri)
 //&&&staticSymbol&&&	{
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 if (genPackage.hasExtendedMetaData()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		<%
@@ -224,11 +220,6 @@ if (genPackage.isDataTypeConverters() && genPackage.hasDocumentRoot()) {
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		return result;
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ResourceFactoryClass/createResource.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&} //<%

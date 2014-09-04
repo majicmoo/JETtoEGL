@@ -2,9 +2,6 @@ class Editor {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
-//&&&staticSymbol&&&<%include("Editor/addItemProviderFactories.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("Editor/addItemProviderFactories.insert.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -91,6 +88,7 @@ String _ListOfPropertySheetPage = "List" + (genModel.useGenerics() ? "<PropertyS
 //&&&staticSymbol&&&<%
 String _ArrayListOfPropertySheetPage = "ArrayList" + (genModel.useGenerics() ? "<PropertySheetPage>" : "");
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getPresentationPackageName()
 //&&&staticSymbol&&&%>;
@@ -1177,9 +1175,6 @@ if (!genModel.isRichClientPlatform()) {
 //&&&staticSymbol&&&		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 for (GenPackage aGenPackage : genModel.getAllGenPackagesWithClassifiers()) {
 //&&&staticSymbol&&&%>

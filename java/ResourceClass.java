@@ -5,7 +5,6 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.ecore.EStructuralFeature;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.ecore.util.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -23,6 +22,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenPackage genPackage = (GenPackage)argument; GenModel genModel=genPackage.getGenModel(); ExtendedMetaData extendedMetaData= genModel.getExtendedMetaData();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getUtilitiesPackageName()
 //&&&staticSymbol&&&%>;

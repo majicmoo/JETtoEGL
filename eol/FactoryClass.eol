@@ -2,7 +2,6 @@
     {
         //&&&staticSymbol&&&<%import java.util.*;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -37,6 +36,7 @@
         //&&&staticSymbol&&&<%
         String publicStaticFinalFlag = if (isImplementation) {"public static final ";} else {"";};
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         if (isInterface or genModel.isSuppressInterfaces()) {
             //&&&staticSymbol&&&%>

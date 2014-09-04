@@ -1,18 +1,5 @@
 [%import java.util.*;%]
 [%import org.eclipse.emf.codegen.ecore.genmodel.*;%]
-[%include("../Header.javajetinc");%]
-[%include("ItemProvider/getText.override.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsAttributeDelegatedFeature.insert.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsAttributeFeature.insert.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsAttributeDelegatedFeature.override.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsAttributeFeature.override.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsReferenceDelegatedFeature.override.javajetinc");%]
-[%include("ItemProvider/addPropertyDescriptor.override.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsReferenceFeature.override.javajetinc");%]
-[%include("ItemProvider/getStyledText.override.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsReferenceDelegatedFeature.insert.javajetinc");%]
-[%include("ItemProvider/insert.javajetinc");%]
-[%include("ItemProvider/newChildDescriptorsReferenceFeature.insert.javajetinc");%]
 [%/**
 * Copyright (c) 2002-2007 IBM Corporation and others.
 * All rights reserved.   This program and the accompanying materials
@@ -26,6 +13,7 @@
 [%var genClass = argument;
 var genPackage = genClass.getGenPackage();
 var genModel = genPackage.getGenModel();%]
+[%include("../Header.javajetinc");%]
 package [%=genPackage.getProviderPackageName()%];
 [%genModel.addImport("org.eclipse.emf.common.notify.AdapterFactory");%]
 [%genModel.addImport("org.eclipse.emf.common.notify.Notification");%]
@@ -93,7 +81,6 @@ return itemPropertyDescriptors;
 */
 protected void add[%=genFeature.getCapName()%]PropertyDescriptor(Object object)
 {
-[%@ start %]
 itemPropertyDescriptors.add
 (createItemPropertyDescriptor
 ((([%=genModel.getImportedName("org.eclipse.emf.edit.provider.ComposeableAdapterFactory")%])adapterFactory).getRootAdapterFactory(),
@@ -131,7 +118,6 @@ var filterFlag = j.next();%]
 [%};} %]
 }));
 [%}%]
-[%@ end %][%//ItemProvider/addPropertyDescriptor.override.javajetinc%]
 }
 [%} %]
 [%if (notgenClass.getChildrenFeatures().isEmpty()) {%]
@@ -228,7 +214,6 @@ return true;
 [%}%]
 public String getText(Object object)
 {
-[%@ start %]
 [%if (genModel.isStyleProviders()) {%]
 return (([%=genModel.getImportedName("org.eclipse.emf.edit.provider.StyledString")%])getStyledText(object)).getString();
 [%} else {%]
@@ -282,7 +267,6 @@ getString("_UI_[%=genClass.getName()%]_type") + " " + label;[%=genModel.getNonNL
 return getString("_UI_[%=genClass.getName()%]_type");[%=genModel.getNonNLS()%]
 [%}%]
 [%}%]
-[%@ end %][%//ItemProvider/getText.override.javajetinc%]
 }
 [%if (genModel.isStyleProviders()) {%]
 /**
@@ -296,7 +280,6 @@ return getString("_UI_[%=genClass.getName()%]_type");[%=genModel.getNonNLS()%]
 [%}%]
 public Object getStyledText(Object object)
 {
-[%@ start %]
 [%if (genClass.isMapEntry()) {%]
 [%=genClass.getImportedInterfaceName()%][%if (genModel.useGenerics()) {%]<?, ?>[%}%] [%=genClass.getSafeUncapName()
 %] = ([%=genClass.getImportedInterfaceName()%][%if (genModel.useGenerics()) {%]<?, ?>[%}%])object;
@@ -353,7 +336,6 @@ return styledLabel;
 [%} else {%]
 return new [%=genModel.getImportedName("org.eclipse.emf.edit.provider.StyledString")%](getString("_UI_[%=genClass.getName()%]_type"));[%=genModel.getNonNLS()%]
 [%}%]
-[%@ end %][%//ItemProvider/getStyledText.override.javajetinc%]
 }	
 [%}%]
 /**
@@ -418,7 +400,6 @@ var createClassifier = childCreationData.createClassifier;%]
 [%if (createFeature.isFeatureMapType()) {%]
 [%if (delegatedFeature.isReferenceType()) {
 var createClass = createClassifier;%]
-[%@ start %]
 newChildDescriptors.add
 (createChildParameter
 ([%=createFeature.getQualifiedFeatureAccessor()%],
@@ -429,10 +410,8 @@ newChildDescriptors.add
 [%} else {%]
 [%=createClass.getGenPackage().getQualifiedFactoryInstanceAccessor()%].create[%=createClass.getName()%]())));
 [%}%]
-[%@ end %][%//ItemProvider/newChildDescriptorsReferenceDelegatedFeature.override.javajetinc%]
 [%} else {
 var createDataType = createClassifier;%]
-[%@ start %]
 newChildDescriptors.add
 (createChildParameter
 ([%=createFeature.getQualifiedFeatureAccessor()%],
@@ -447,11 +426,9 @@ var literal = delegatedFeature.getCreateChildValueLiteral();%]
 [%=createDataType.getGenPackage().getQualifiedEFactoryInstanceAccessor()%].createFromString([%=createDataType.getQualifiedClassifierAccessor()%], [%=literal%]))));[%if (literal <> null) {
 %][%=genModel.getNonNLS()%][%} else {%] // TODO: ensure this is a valid literal value[%}%]
 [%}%]
-[%@ end %][%//ItemProvider/newChildDescriptorsAttributeDelegatedFeature.override.javajetinc%]
 [%}%]
 [%} else if (createFeature.isReferenceType()) {
 var createClass = createClassifier;%]
-[%@ start %]
 newChildDescriptors.add
 (createChildParameter
 ([%=createFeature.getQualifiedFeatureAccessor()%],
@@ -460,10 +437,8 @@ newChildDescriptors.add
 [%} else {%]
 [%=createClass.getGenPackage().getQualifiedFactoryInstanceAccessor()%].create[%=createClass.getName()%]()));
 [%}%]
-[%@ end %][%//ItemProvider/newChildDescriptorsReferenceFeature.override.javajetinc %]
 [%} else {
 var createDataType = createClassifier;%]
-[%@ start %]
 newChildDescriptors.add
 (createChildParameter
 ([%=createFeature.getQualifiedFeatureAccessor()%],
@@ -476,7 +451,6 @@ var literal = createFeature.getCreateChildValueLiteral();%]
 [%=createDataType.getGenPackage().getQualifiedEFactoryInstanceAccessor()%].createFromString([%=createDataType.getQualifiedClassifierAccessor()%], [%=literal%])));[%if (literal <> null) {
 %][%=genModel.getNonNLS()%][%} else {%] // TODO: ensure this is a valid literal value[%}%]
 [%}%]
-[%@ end %][%//ItemProvider/newChildDescriptorsAttributeFeature.override.javajetinc%]
 [%}%]
 [%} %]
 }

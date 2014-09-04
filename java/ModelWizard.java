@@ -1,7 +1,6 @@
 class ModelWizard {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -19,6 +18,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenPackage genPackage = (GenPackage)argument; GenModel genModel=genPackage.getGenModel();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 String _ListOfString = "List" + (genModel.useGenerics() ? "<" + genModel.getImportedName("java.lang.String") + ">" : "");
 //&&&staticSymbol&&&%>

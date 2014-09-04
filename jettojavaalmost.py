@@ -4,7 +4,7 @@ import glob
 
 def main(fname):
     imports = []    # List to store imports
-    includes = set() # Set to store includes
+    include = [] # Set to store includes
     inDynamic = False
     startStatic = 0
     edit_fname = "bin/temp.txt"
@@ -31,13 +31,11 @@ def main(fname):
     
     ## loop through jet file
     ##  1. Look for imports and store in a list
-    ##  2. Look for includes and store in a list
     ##  3. Comment out static parts of Jet with staticSymbol 
     ##  and save changes to temporary file
     for line in file_origin:
         imports = findImports(line, imports)
-        includes = findIncludes(line, includes)
-        inDynamic = commentStatic(line, file_edit, inDynamic, staticSymbol)
+        inDynamic, include = commentStatic(line, file_edit, inDynamic, staticSymbol, include)
           
     ## write main class to allow java transformation to work
     writeToFile(file_destination, "class "+cleanFileName(fname)+ " {\n")
@@ -48,9 +46,7 @@ def main(fname):
     for i in imports:
         writeToFile(file_destination, staticSymbol+ "<%import " + i + ";%>\n")
     
-    ## write includes to destination
-    for i in includes:
-        writeToFile(file_destination, staticSymbol+ "<%include(\""+i+"\");%>\n")
+    
     
     file_edit.close()
     file_edit = open(edit_fname, "r")
@@ -108,35 +104,73 @@ def main(fname):
     
     
         
-def commentStatic(line, filename, inDynamic, staticSymbol):
-    count = 0
+def commentStatic(line, filename, inDynamic, staticSymbol, include): 
+    if "@ start" in line:
+        if not commentChecker(line, "@ start"):
+            
+            return inDynamic, include
+        
+    if include != []:
+        if include[-1] == "remove":
+            if "@ end" in line:
+                if not commentChecker(line, "@ end"):
+                    ## line is @end and code should be removed
+                    
+                    include.pop()
+                    return inDynamic, include
+            
+            return inDynamic, include
+        
+        elif include[-1] == "keep":
+            if "@ end" in line:
+                ## line is @end and line should be removed
+                if not commentChecker(line, "@ end"):
+                    
+                    include.pop()
+                    return inDynamic, include
+        
+     
+    if "@ include" in line:
+        if not commentChecker(line, "include"):
+            if "fail=" in line:
+                #extended include
+                
+                silent_or_alternative = line.split("=")[-1].replace("\"", "").replace("%>","").strip()
+                include_name = line.split("=")[1].replace("\"", "").replace("%>","")
+                
+                #Check if file exists
+                if os.path.isfile(os.path.join("jet", include_name)):
+                    #file exists
+                    writeToFile(filename, staticSymbol+ "<%include(\""+include_name+"\");%>\n")
+                    if silent_or_alternative == "alternative":
+                        include.append("remove")
+                    return inDynamic, include
+                    
+                else:
+                    #File doesn't exist
+                    if silent_or_alternative == "alternative":
+                        
+                        include.append("keep")
+                    return inDynamic, include
+                
+            
+            
+            else:
+                #normal include
+                i = line.split("=")[-1].replace("\"", "").replace("%>","").strip()
+                writeToFile(filename, staticSymbol+ "<%include(\""+i+"\");%>\n")
+                return inDynamic, include
+                
+    
+    
+    
+    
     ##returns if an import statement
     if "import" in line:
-    
-        ## Rubbishy way of dealing with the word import in comments
-        temp_line = line.split("/*")
-        if len(temp_line) <= 1:
-            commentSplit = line.split("//")
-            if len(commentSplit) <= 1:
-                return inDynamic
-            if "import" in commentSplit[0]: 
-                return inDynamic
-        if "import" in temp_line[0]:
-            return inDynamic
-        
-    ##returns if an include statement   
-    if "@ include" in line:
-    ## Rubbishy way of dealing with the word include in comments
-        temp_line = line.split("/*")
-        if len(temp_line) <= 1:
-            commentSplit = line.split("//")
-            if len(commentSplit) <= 1:
-                return inDynamic
-            if "include" in commentSplit[0]: 
-                return inDynamic
-        if "include" in temp_line[0]:
-            return inDynamic
-
+        if not commentChecker(line, "import"):
+            return inDynamic, include
+         
+    count = 0
     temp = False
     for char in line:
         if inDynamic == False:
@@ -170,7 +204,7 @@ def commentStatic(line, filename, inDynamic, staticSymbol):
                 else:
                     writeToFile(filename, char)
         count += 1
-    return inDynamic
+    return inDynamic, include
         
 
 def findImports(line, imports):
@@ -208,6 +242,20 @@ def cleanFileName(fname):
     temp = temp[-1]
     temp = temp.split(".")
     return temp[0]
+    
+    
+def commentChecker(line, keyword):
+    #returns true if comment
+    temp_line = line.split("/*")
+    if len(temp_line) <= 1:
+        commentSplit = line.split("//")
+        if len(commentSplit) <= 1:
+            return False
+        if keyword in commentSplit[0]: 
+            return False
+    if keyword in temp_line[0]:
+        return False
+    return True
 
 path = "jet/*"
 files = glob.glob(path)

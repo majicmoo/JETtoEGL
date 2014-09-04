@@ -2,7 +2,6 @@ class PackageTestSuite {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -20,6 +19,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenPackage genPackage = (GenPackage)argument; GenModel genModel = genPackage.getGenModel(); /* Trick to import java.util.* without warnings */Iterator.class.getName();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getTestsPackageName()
 //&&&staticSymbol&&&%>;

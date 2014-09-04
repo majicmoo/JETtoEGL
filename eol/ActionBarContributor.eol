@@ -1,7 +1,6 @@
 {
     {
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -49,6 +48,7 @@
             }
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&package <%
         //&&&staticSymbol&&&=genPackage.getPresentationPackageName()
         //&&&staticSymbol&&&%>;

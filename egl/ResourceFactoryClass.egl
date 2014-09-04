@@ -1,6 +1,4 @@
 [%import org.eclipse.emf.codegen.ecore.genmodel.*;%]
-[%include("../Header.javajetinc");%]
-[%include("ResourceFactoryClass/createResource.override.javajetinc");%]
 [%/**
 * Copyright (c) 2002-2006 IBM Corporation and others.
 * All rights reserved.   This program and the accompanying materials
@@ -13,6 +11,7 @@
 */%]
 [%var genPackage = argument;
 var genModel = genPackage.getGenModel();%]
+[%include("../Header.javajetinc");%]
 package [%=genPackage.getUtilitiesPackageName()%];
 [%genModel.getImportedName("org.eclipse.emf.common.util.URI");%]
 [%genModel.getImportedName("org.eclipse.emf.ecore.resource.Resource");%]
@@ -76,7 +75,6 @@ xmlMap.setNoNamespacePackage([%=genPackage.getImportedPackageInterfaceName()%].e
 [%}%]
 public Resource createResource(URI uri)
 {
-[%@ start %]
 [%if (genPackage.hasExtendedMetaData()) {%]
 [%=genModel.getImportedName("org.eclipse.emf.ecore.xmi.XMLResource")%] result = new [%=genPackage.getResourceClassName()%](uri);
 result.getDefaultSaveOptions().put([%=genModel.getImportedName("org.eclipse.emf.ecore.xmi.XMLResource")%].OPTION_EXTENDED_META_DATA, [%if (genPackage.hasTargetNamespace()) {%]Boolean.TRUE[%} else {%]extendedMetaData[%}
@@ -98,7 +96,6 @@ result.getDefaultLoadOptions().put([%=genModel.getImportedName("org.eclipse.emf.
 Resource result = new [%=genPackage.getResourceClassName()%](uri);
 [%}%]
 return result;
-[%@ end %][%//ResourceFactoryClass/createResource.override.javajetinc%]
 }
 } //[%=genPackage.getResourceFactoryClassName()%]
 [%genModel.emitSortedImports();%]

@@ -2,7 +2,6 @@
     {
         //&&&staticSymbol&&&<%import java.util.*;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-        //&&&staticSymbol&&&<%include("../Header.xmljetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -34,6 +33,7 @@
         //&&&staticSymbol&&&<?xml version="1.0" encoding="UTF-8"?>
         //&&&staticSymbol&&&<?eclipse version="3.0"?>
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&<%include("../Header.xmljetinc");%>
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&<%
         if (genModel.isBundleManifest()) {

@@ -1,5 +1,4 @@
 [%import org.eclipse.emf.codegen.ecore.genmodel.*;%]
-[%include("../Header.javajetinc");%]
 [%/**
 * Copyright (c) 2005-2007 IBM Corporation and others.
 * All rights reserved.   This program and the accompanying materials
@@ -27,6 +26,7 @@ var _Diagnostician = genModel.getImportedName("org.eclipse.emf.ecore.util.Diagno
 var _Resource = genModel.getImportedName("org.eclipse.emf.ecore.resource.Resource");
 var _ResourceSet = genModel.getImportedName("org.eclipse.emf.ecore.resource.ResourceSet");
 var _ResourceSetImpl = genModel.getImportedName("org.eclipse.emf.ecore.resource.impl.ResourceSetImpl");%]
+[%include("../Header.javajetinc");%]
 package [%=genPackage.getTestsPackageName()%];
 [%genModel.markImportLocation(stringBuffer);%]
 /**

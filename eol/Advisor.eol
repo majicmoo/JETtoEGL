@@ -1,7 +1,6 @@
 {
     {
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -35,6 +34,7 @@
         //&&&staticSymbol&&&<%
         var _StringBuilder = genModel.getImportedName(if (genModel.useGenerics()) {"java.lang.StringBuilder";} else {"java.lang.StringBuffer";});
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&package <%
         //&&&staticSymbol&&&=genModel.getEditorPluginPackageName()
         //&&&staticSymbol&&&%>;

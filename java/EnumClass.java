@@ -3,7 +3,6 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.impl.Literals;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -21,6 +20,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenEnum genEnum = (GenEnum)argument; GenPackage genPackage = genEnum.getGenPackage(); GenModel genModel=genPackage.getGenModel();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getInterfacePackageName()
 //&&&staticSymbol&&&%>;

@@ -2,7 +2,6 @@ class plugin {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.xmljetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -23,6 +22,7 @@ GenModel genModel = (GenModel)argument; String key = genModel.getPluginKey(); bo
 //&&&staticSymbol&&&<?xml version="1.0" encoding="UTF-8"?>
 //&&&staticSymbol&&&<?eclipse version="3.0"?>
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&<%include("../Header.xmljetinc");%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 if (genModel.isBundleManifest()) {

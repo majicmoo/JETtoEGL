@@ -2,9 +2,6 @@
     {
         //&&&staticSymbol&&&<%import java.util.*;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
-        //&&&staticSymbol&&&<%include("Editor/addItemProviderFactories.override.javajetinc");%>
-        //&&&staticSymbol&&&<%include("Editor/addItemProviderFactories.insert.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -101,6 +98,7 @@
         //&&&staticSymbol&&&<%
         var _ArrayListOfPropertySheetPage = "ArrayList" + (if (genModel.useGenerics()) {"<PropertySheetPage>";} else {"";});
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&package <%
         //&&&staticSymbol&&&=genPackage.getPresentationPackageName()
         //&&&staticSymbol&&&%>;
@@ -1187,9 +1185,6 @@
         //&&&staticSymbol&&&		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-        //&&&staticSymbol&&&<%
-        //&&&staticSymbol&&&@ start
-        //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&<%
         for (aGenPackage in genModel.getAllGenPackagesWithClassifiers()){
             //&&&staticSymbol&&&%>

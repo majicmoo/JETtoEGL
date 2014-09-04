@@ -5,7 +5,6 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%import org.eclipse.emf.ecore.util.EcoreUtil;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.impl.Literals;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -35,6 +34,7 @@ boolean needsAddEOperation = false;
 //&&&staticSymbol&&&<%
 boolean needsAddEParameter = false;
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 if (isImplementation && !genModel.isSuppressInterfaces()) {
 //&&&staticSymbol&&&%>

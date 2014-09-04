@@ -2,7 +2,6 @@
     {
         //&&&staticSymbol&&&<%import java.util.*;%>
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -29,6 +28,7 @@
         /* Trick to import java.util.* without warnings */
         Iterator.class.getName();
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.javajetinc");%>
         //&&&staticSymbol&&&package <%
         //&&&staticSymbol&&&=genModel.getTestSuitePackageName()
         //&&&staticSymbol&&&%>;

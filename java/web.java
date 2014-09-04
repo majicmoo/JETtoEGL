@@ -2,7 +2,6 @@ class web {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.xmljetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -22,6 +21,7 @@ GenModel genModel = (GenModel)argument; /* Trick to import java.util.* without w
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<?xml version="1.0" encoding="UTF-8"?>
 //&&&staticSymbol&&&<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+//&&&staticSymbol&&&<%include("../Header.xmljetinc");%>
 //&&&staticSymbol&&&<web-app>
 //&&&staticSymbol&&&  <servlet>
 //&&&staticSymbol&&&    <servlet-name>uriServlet</servlet-name>

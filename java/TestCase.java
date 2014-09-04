@@ -2,26 +2,6 @@ class TestCase {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/unsetGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/implementedGenFeature.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/unsetGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/getGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/implementedGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/genOperation.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/isSetGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/isSetGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/implementedGenOperation.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/setGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/getGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/implementedGenOperation.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/implementedGenOperation.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/setGenFeature.TODO.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/isSetGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/getGenFeature.annotations.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/setGenFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("TestCase/unsetGenFeature.annotations.insert.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -39,6 +19,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenClass genClass = (GenClass)argument; GenPackage genPackage = genClass.getGenPackage(); GenModel genModel=genPackage.getGenModel(); /* Trick to import java.util.* without warnings */Iterator.class.getName();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getTestsPackageName()
 //&&&staticSymbol&&&%>;
@@ -379,17 +360,11 @@ if (genModel.useClassOverrideAnnotation()) {
 //&&&staticSymbol&&&<%
 for (GenFeature genFeature : genClass.getImplementedGenFeatures()) {
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&  <%
 if (genFeature.isTested()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 if (genFeature.isGet() && !genFeature.isSuppressedGetVisibility()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&	/**
@@ -419,31 +394,15 @@ if (genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) { //TestCase/
 //&&&staticSymbol&&&=genModel.capName(genFeature.getGetAccessor())
 //&&&staticSymbol&&&%>()
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this feature getter test method
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		fail();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/getGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/getGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 if (genFeature.isSet() && !genFeature.isSuppressedSetVisibility()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&	/**
@@ -477,31 +436,15 @@ if (genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) { //TestCase/
 //&&&staticSymbol&&&=genFeature.getAccessorName()
 //&&&staticSymbol&&&%>()
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this feature setter test method
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		fail();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/setGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/setGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 if (genFeature.isUnset() && !genFeature.isSuppressedUnsetVisibility()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&	/**
@@ -531,31 +474,15 @@ if (genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) { //TestCase/
 //&&&staticSymbol&&&=genFeature.getAccessorName()
 //&&&staticSymbol&&&%>()
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this test method
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		fail();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/unsetGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/unsetGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 if (genFeature.isIsSet() && !genFeature.isSuppressedIsSetVisibility()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&	/**
@@ -585,23 +512,10 @@ if (genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) { //TestCase/
 //&&&staticSymbol&&&=genFeature.getAccessorName()
 //&&&staticSymbol&&&%>()
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this test method
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		fail();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/isSetGenFeature.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/isSetGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&    <%
 }
 //&&&staticSymbol&&&%>
@@ -609,18 +523,10 @@ if (genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) { //TestCase/
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/implementedGenFeature.override.javajetinc
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 for (GenOperation genOperation : genClass.getImplementedGenOperations()) {
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&	/**
@@ -654,23 +560,10 @@ if (genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) { //TestCase/
 //&&&staticSymbol&&&=genClass.getUniqueName(genOperation)
 //&&&staticSymbol&&&%>()
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		// TODO: implement this operation test method
 //&&&staticSymbol&&&		// Ensure that you remove @generated or mark it @generated NOT
 //&&&staticSymbol&&&		fail();
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/implementedGenOperation.todo.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//TestCase/implementedGenOperation.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>

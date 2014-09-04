@@ -3,8 +3,6 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.util.CodeGenUtil;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
-//&&&staticSymbol&&&<%include("ValidatorClass/insert.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -25,6 +23,7 @@ GenPackage genPackage = (GenPackage)argument; GenModel genModel=genPackage.getGe
 //&&&staticSymbol&&&<%
 final String singleWildcard = genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50 ? "<?>" : "";
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getUtilitiesPackageName()
 //&&&staticSymbol&&&%>;

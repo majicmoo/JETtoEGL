@@ -1,7 +1,6 @@
 class Advisor {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -28,6 +27,7 @@ String _UniqueEListOfString = "UniqueEList" + (genModel.useGenerics() ? "<String
 //&&&staticSymbol&&&<%
 String _StringBuilder = genModel.getImportedName(genModel.useGenerics() ? "java.lang.StringBuilder" : "java.lang.StringBuffer");
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genModel.getEditorPluginPackageName()
 //&&&staticSymbol&&&%>;

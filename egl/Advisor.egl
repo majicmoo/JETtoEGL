@@ -1,5 +1,4 @@
 [%import org.eclipse.emf.codegen.ecore.genmodel.*;%]
-[%include("../Header.javajetinc");%]
 [%/**
 * Copyright (c) 2004-2010 IBM Corporation and others.
 * All rights reserved.   This program and the accompanying materials
@@ -14,6 +13,7 @@
 [%var _ListOfString = "List" + (if (genModel.useGenerics()) {"<String>";} else {"";});%]
 [%var _UniqueEListOfString = "UniqueEList" + (if (genModel.useGenerics()) {"<String>";} else {"";});%]
 [%var _StringBuilder = genModel.getImportedName(if (genModel.useGenerics()) {"java.lang.StringBuilder";} else {"java.lang.StringBuffer";});%]
+[%include("../Header.javajetinc");%]
 package [%=genModel.getEditorPluginPackageName()%];
 [%if (notgenModel.isRichAjaxPlatform()) {%]
 [%}%]

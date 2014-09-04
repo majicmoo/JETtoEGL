@@ -2,7 +2,6 @@ class FactoryClass {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -26,6 +25,7 @@ boolean isInterface = Boolean.TRUE.equals(((Object[])argument)[1]); boolean isIm
 //&&&staticSymbol&&&<%
 String publicStaticFinalFlag = isImplementation ? "public static final " : "";
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 if (isInterface || genModel.isSuppressInterfaces()) {
 //&&&staticSymbol&&&%>

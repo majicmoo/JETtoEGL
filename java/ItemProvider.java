@@ -2,19 +2,6 @@ class ItemProvider {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import java.util.*;%>
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/getText.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsAttributeDelegatedFeature.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsAttributeFeature.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsAttributeDelegatedFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsAttributeFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsReferenceDelegatedFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/addPropertyDescriptor.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsReferenceFeature.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/getStyledText.override.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsReferenceDelegatedFeature.insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/insert.javajetinc");%>
-//&&&staticSymbol&&&<%include("ItemProvider/newChildDescriptorsReferenceFeature.insert.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -32,6 +19,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenClass genClass = (GenClass)argument; GenPackage genPackage = genClass.getGenPackage(); GenModel genModel=genPackage.getGenModel();
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genPackage.getProviderPackageName()
 //&&&staticSymbol&&&%>;
@@ -172,9 +160,6 @@ for (GenFeature genFeature : genClass.getPropertyFeatures()) {
 //&&&staticSymbol&&&=genFeature.getCapName()
 //&&&staticSymbol&&&%>PropertyDescriptor(Object object)
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&		itemPropertyDescriptors.add
 //&&&staticSymbol&&&			(createItemPropertyDescriptor
 //&&&staticSymbol&&&				(((<%
@@ -291,11 +276,6 @@ if (j.hasNext()) {
 //&&&staticSymbol&&&				 }));
 //&&&staticSymbol&&&  <%
 }
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ItemProvider/addPropertyDescriptor.override.javajetinc
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&
@@ -464,9 +444,6 @@ if (genModel.useClassOverrideAnnotation()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	public String getText(Object object)
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 if (genModel.isStyleProviders()) {
 //&&&staticSymbol&&&%>
@@ -672,11 +649,6 @@ if (labelFeature.isSuppressedGetVisibility() || labelFeature.getGenClass().isDyn
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ItemProvider/getText.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}
 //&&&staticSymbol&&&	
 //&&&staticSymbol&&&<%
@@ -697,9 +669,6 @@ if (genModel.useClassOverrideAnnotation()) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	public Object getStyledText(Object object)
 //&&&staticSymbol&&&	{
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 if (genClass.isMapEntry()) {
 //&&&staticSymbol&&&%>
@@ -922,11 +891,6 @@ if (labelFeature.isSuppressedGetVisibility() || labelFeature.getGenClass().isDyn
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ItemProvider/getStyledText.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&	}	
 //&&&staticSymbol&&&<%
 }
@@ -1052,9 +1016,6 @@ if (createFeature.isFeatureMapType()) {
 //&&&staticSymbol&&&        <%
 if (delegatedFeature.isReferenceType()) { GenClass createClass = (GenClass)createClassifier;
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&		newChildDescriptors.add
 //&&&staticSymbol&&&			(createChildParameter
@@ -1086,16 +1047,8 @@ if (createClass.isMapEntry()) {
 //&&&staticSymbol&&&          <%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ItemProvider/newChildDescriptorsReferenceDelegatedFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&        <%
 } else { GenDataType createDataType = (GenDataType)createClassifier;
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&		newChildDescriptors.add
@@ -1144,19 +1097,11 @@ if (literal != null) {
 //&&&staticSymbol&&&          <%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ItemProvider/newChildDescriptorsAttributeDelegatedFeature.override.javajetinc
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&        <%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&      <%
 } else if (createFeature.isReferenceType()) { GenClass createClass = (GenClass)createClassifier;
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&		newChildDescriptors.add
@@ -1183,16 +1128,8 @@ if (createClass.isMapEntry()) {
 //&&&staticSymbol&&&        <%
 }
 //&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ItemProvider/newChildDescriptorsReferenceFeature.override.javajetinc 
-//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&      <%
 } else { GenDataType createDataType = (GenDataType)createClassifier;
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ start 
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&		newChildDescriptors.add
@@ -1234,11 +1171,6 @@ if (literal != null) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&        <%
 }
-//&&&staticSymbol&&&%>
-//&&&staticSymbol&&&<%
-//&&&staticSymbol&&&@ end 
-//&&&staticSymbol&&&%><%
-//ItemProvider/newChildDescriptorsAttributeFeature.override.javajetinc
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&      <%
 }

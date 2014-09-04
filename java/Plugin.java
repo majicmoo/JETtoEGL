@@ -1,7 +1,6 @@
 class Plugin {
 public static void main (String[] args) {
 //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
-//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&<%
 
 /**
@@ -19,6 +18,7 @@ public static void main (String[] args) {
 //&&&staticSymbol&&&<%
 GenModel genModel = (GenModel)argument;
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%include("../Header.javajetinc");%>
 //&&&staticSymbol&&&package <%
 //&&&staticSymbol&&&=genModel.getModelPluginPackageName()
 //&&&staticSymbol&&&%>;

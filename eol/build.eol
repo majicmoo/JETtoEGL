@@ -2,7 +2,6 @@
     {
         //&&&staticSymbol&&&<%import org.eclipse.emf.codegen.ecore.genmodel.*;%>
         //&&&staticSymbol&&&<%import java.util.*;%>
-        //&&&staticSymbol&&&<%include("../Header.propertiesjetinc");%>
         //&&&staticSymbol&&&<%
         /**
         
@@ -33,6 +32,7 @@
         //&&&staticSymbol&&&<%
         var sourceFolders = genModel.getModelSourceFolders();
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%include("../Header.propertiesjetinc");%>
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&bin.includes = <%
         //&&&staticSymbol&&&=pluginClassesLocation
