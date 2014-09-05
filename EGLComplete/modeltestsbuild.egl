@@ -1,0 +1,34 @@
+[%import org.eclipse.emf.codegen.ecore.genmodel.*;%]
+[%import java.util.*;%]
+[%/**
+* Copyright (c) 2005-2008 IBM Corporation and others.
+* All rights reserved.   This program and the accompanying materials
+* are made available under the terms of the Eclipse Public License v1.0
+* which accompanies this distribution, and is available at
+* http://www.eclipse.org/legal/epl-v10.html
+* 
+* Contributors: 
+*   IBM - Initial API and implementation
+*/%]
+[%var genModel = argument;%]
+[%String pluginClassesLocation = if (genModel.isRuntimeJar()) {genModel.getTestsPluginID() + ".jar";} else {".";};%]
+[%var sourceFolders = genModel.getTestsSourceFolders();%]
+[%include("../Header.propertiesjetinc");%]
+bin.includes = [%=pluginClassesLocation%],\
+[%if (genModel.isBundleManifest()) {%]
+META-INF/,\
+[%} else {%]
+plugin.xml,\
+[%}%]
+plugin.properties
+jars.compile.order = [%=pluginClassesLocation%]
+[%var first = true;
+Iterator < String > i = sourceFolders.iterator(); while (i.hasNext();) {{
+var sourceFolder = i.next();
+if (i.hasNext()) {
+sourceFolder += ",\\";
+}
+if (first) {%]
+source.[%=pluginClassesLocation%] = [%=sourceFolder%][%first = false;
+} else {%][%=sourceFolder%][%}};} %]
+output.[%=pluginClassesLocation%] = bin/

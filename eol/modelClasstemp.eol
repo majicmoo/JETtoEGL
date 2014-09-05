@@ -1,0 +1,21 @@
+{
+    {
+        if (genClass.getFlagSize(genFeature) > 1) {"s";} else {"";};
+        if (genClass.getClassExtendsGenClass() = null) {0;} else {genClass.getClassExtendsGenClass().getAllGenFeatures().size();};
+        if (genClass.getClassExtendsGenClass() = null) {"0";} else {genClass.hasStaticFeatures() ? "ESTATIC_FEATURE_COUNT" : Integer.toString(genClass.getClassExtendsGenClass().getAllGenFeatures().size());};
+        if (genFeature.isMapType() and genFeature.isEffectiveSuppressEMFTypes()) {".map()";} else {"";};
+        if (setAccessorOperation = null) {"new" + genFeature.getCapName();} else {setAccessorOperation.getGenParameters().get(0).getName();};
+        if (setAccessorOperation = null) {"new" + genFeature.getCapName();} else {setAccessorOperation.getGenParameters().get(0).getName();};
+        if (genFeature.isMapType() and genFeature.isEffectiveSuppressEMFTypes()) {".map()";} else {"";};
+        if (setAccessorOperation = null) {"new" + genFeature.getCapName();} else {setAccessorOperation.getGenParameters().get(0).getName();};
+        genModel.getImportedName(if (isGWT) {"org.eclipse.emf.common.util.InvocationTargetException";} else {"java.lang.reflect.InvocationTargetException";});
+        genClass.getQualifiedOperationID(if (overrideGenOperation <> null) {overrideGenOperation;} else {genOperation;});
+        genModel.getImportedName(if (isGWT) {"org.eclipse.emf.common.util.InvocationTargetException";} else {"java.lang.reflect.InvocationTargetException";});
+        if (genParameter.usesOperationTypeParameters()) {genParameter.getRawImportedType();} else {genParameter.getObjectType(genClass);};
+        if (genParameter.usesOperationTypeParameters()) {genParameter.getRawImportedType();} else {genParameter.getObjectType(genClass);};
+        genModel.getImportedName(if (isGWT) {"org.eclipse.emf.common.util.InvocationTargetException";} else {"java.lang.reflect.InvocationTargetException";});
+        if (isInterface) {" " + genClass.getInterfaceName();} else {genClass.getClassName();};
+    }
+
+}
+

@@ -1,1 +1,7 @@
+{
+    {
         if (genPackage.isXMIResource()) {"org.eclipse.emf.ecore.xmi";} else {"org.eclipse.core.runtime.xml";};
+    }
+
+}
+

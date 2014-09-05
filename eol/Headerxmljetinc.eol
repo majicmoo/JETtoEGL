@@ -1,0 +1,21 @@
+{
+    {
+        //&&&staticSymbol&&&<!--
+        //&&&staticSymbol&&&<%
+        {
+            GenBase copyrightHolder = if (argument instanceof GenBase) {argument;} else {argument instanceof Object [] and (argument) [0] instanceof GenBase ? (GenBase)(argument) [0] : null;};
+            //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&<%
+            if (copyrightHolder <> null and copyrightHolder.hasCopyright()) {
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&<%
+                //&&&staticSymbol&&&=copyrightHolder.getCopyright(copyrightHolder.getGenModel().getIndentation(stringBuffer))
+                //&&&staticSymbol&&&%>
+                //&&&staticSymbol&&&<%
+            }
+        } //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&-->
+    }
+
+}
+
