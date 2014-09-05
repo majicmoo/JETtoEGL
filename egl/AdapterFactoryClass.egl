@@ -112,7 +112,7 @@ public [%=returnType%] defaultCase(EObject object)
 {
 return create[%=genPackage.getClassUniqueName(null)%]Adapter();
 }
-};
+}
 /**
 * Creates an adapter for the <code>target</code>.
 * <!-- begin-user-doc -->

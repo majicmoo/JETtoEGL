@@ -1,5 +1,5 @@
 <%@ jet package="blerg" class="testEverything" imports="testing.*  abc.* iasdoh.*"%>
-
+*********************************************
 Do While
 <%int count = 1; %>
 <%do {
@@ -7,7 +7,7 @@ Do While
             count++;
         } while (count < 11);%>
 
-
+*********************************************
 If
 
 <%if (month == 8) {
@@ -16,6 +16,36 @@ If
     month = 9;
 } %>
 
+*********************************************
+Includes
+<%@ include file="Class/declaredFieldGenFeature.override.javajetinc" fail="alternative" %>
+<%@ start %>
+    <%if (genFeature.hasSettingDelegate()) {%>
+	/**
+	 * The cached setting delegate for the '{@link #<%=genFeature.getGetAccessor()%>() <em><%=genFeature.getFormattedName()%></em>}' <%=genFeature.getFeatureKind()%>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #<%=genFeature.getGetAccessor()%>()
+	 * @generated
+	 * @ordered
+	 */
+      <%if (isGWT) {%>
+	@<%=genModel.getImportedName("com.google.gwt.user.client.rpc.GwtTransient")%>
+      <%}%>
+<%}%>
+<%@ include file="Class/declaredFieldGenFeature.insert.javajetinc" fail="silent" %>
+
+<%@ include file="test.test" %>
+<%@ include file="Class/declaredFieldGenFeature.insert.javajetinc" fail="alternative" %>
+<%@ start %>
+hello
+<%@ end %>
+
+
+<%@ end %>
+
+
+*********************************************
 For loop
 <%int a = 0;
 int[] numbers = {1,2,3,4,5,6,7,8,9,10};
@@ -28,6 +58,16 @@ for (int item : numbers) {
         a = 6;
         a = 7;
     }%>
+    
+ *********************************************
+Slots
+
+<%=a.name();%> 
+*********************************************   
+Conditional
+<% int b;%>
+<% int bob = (a > b) ? a : b; %>
+<%= int max = (a > b) ? a : b; %>
     
 
 

@@ -202,7 +202,7 @@ define for_stmt
 end define 
 
 define do_stmt
-    [statement] ';
+    [statement] '; [NL]
     'while '( [assignment_expression] ') '{
         [statement] ';
     '}

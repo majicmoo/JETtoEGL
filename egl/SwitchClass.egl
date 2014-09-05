@@ -37,7 +37,7 @@ usedNames.add(genClass.getName());
 for (genTypeParameter in genClass.getGenTypeParameters()){
 usedNames.add(genTypeParameter.getName());
 ;
-};
+}
 } templateParameterName = "T";
 int i = 1;
 while (usedNames.contains(templateParameterName);) {{

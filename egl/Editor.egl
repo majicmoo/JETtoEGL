@@ -429,7 +429,7 @@ public void partOpened(IWorkbenchPart p)
 {
 // Ignore.
 }
-};
+}
 /**
 * Resources that have been removed since last activation.
 * <!-- begin-user-doc -->
@@ -543,7 +543,7 @@ updateProblemIndication();
 });
 }
 }
-};
+}
 [%if (notgenModel.isRichClientPlatform()) {%]
 /**
 * This listens for workspace changes.
@@ -652,7 +652,7 @@ catch (CoreException exception)
 [%=genPackage.getImportedEditorPluginClassName()%].INSTANCE.log(exception);
 }
 }
-};
+}
 [%}%]
 /**
 * Handles activation of the editor or it's associated views.
@@ -951,7 +951,7 @@ if (currentViewer != null)
 currentViewer.setSelection(new StructuredSelection(theSelection.toArray()), true);
 }
 }
-};
+}
 getSite().getShell().getDisplay().asyncExec(runnable);
 }
 }
@@ -1080,7 +1080,7 @@ public void selectionChanged(SelectionChangedEvent selectionChangedEvent)
 {
 setSelection(selectionChangedEvent.getSelection());
 }
-};
+}
 }
 // Stop listening to the old one.
 //
@@ -1252,7 +1252,7 @@ public void requestActivation()
 super.requestActivation();
 setCurrentViewerPane(this);
 }
-};
+}
 viewerPane.createControl(getContainer());
 selectionViewer = (TreeViewer)viewerPane.getViewer();
 selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
@@ -1295,7 +1295,7 @@ public void requestActivation()
 super.requestActivation();
 setCurrentViewerPane(this);
 }
-};
+}
 viewerPane.createControl(getContainer());
 parentViewer = (TreeViewer)viewerPane.getViewer();
 parentViewer.setAutoExpandLevel(30);
@@ -1328,7 +1328,7 @@ public void requestActivation()
 super.requestActivation();
 setCurrentViewerPane(this);
 }
-};
+}
 viewerPane.createControl(getContainer());
 listViewer = (ListViewer)viewerPane.getViewer();
 listViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
@@ -1360,7 +1360,7 @@ public void requestActivation()
 super.requestActivation();
 setCurrentViewerPane(this);
 }
-};
+}
 viewerPane.createControl(getContainer());
 treeViewer = (TreeViewer)viewerPane.getViewer();
 treeViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
@@ -1398,7 +1398,7 @@ public void requestActivation()
 super.requestActivation();
 setCurrentViewerPane(this);
 }
-};
+}
 viewerPane.createControl(getContainer());
 tableViewer = (TableViewer)viewerPane.getViewer();
 Table table = tableViewer.getTable();
@@ -1449,7 +1449,7 @@ public void requestActivation()
 super.requestActivation();
 setCurrentViewerPane(this);
 }
-};
+}
 viewerPane.createControl(getContainer());
 treeViewerWithColumns = (TreeViewer)viewerPane.getViewer();
 Tree tree = treeViewerWithColumns.getTree();
@@ -1731,7 +1731,7 @@ public void setActionBars(IActionBars actionBars)
 super.setActionBars(actionBars);
 getActionBarContributor().shareGlobalActions(this, actionBars);
 }
-};
+}
 propertySheetPage.setPropertySourceProvider(new AdapterFactoryContentProvider(adapterFactory));
 propertySheetPages.add(propertySheetPage);
 return propertySheetPage;
@@ -1874,7 +1874,7 @@ first = false;
 }
 }
 }
-};
+}
 updateProblemIndication = false;
 try
 {

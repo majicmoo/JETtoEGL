@@ -153,9 +153,6 @@ def commentStatic(line, filename, inDynamic, staticSymbol, include):
                         
                         include.append("keep")
                     return inDynamic, include
-                
-            
-            
             else:
                 #normal include
                 i = line.split("=")[-1].replace("\"", "").replace("%>","").strip()
@@ -224,8 +221,7 @@ def commentStatic(line, filename, inDynamic, staticSymbol, include):
                 temp = False
                 if (char == "%"):
                     inDynamic = True
-                    writeToFile(filename, char)
-                    writeToFile(filename, "\n")
+                    writeToFile(filename, char + "\n")
                 else:
                     writeToFile(filename, char)
             else:
@@ -253,10 +249,11 @@ def commentStatic(line, filename, inDynamic, staticSymbol, include):
 
 def findImports(line, imports):
     if "imports" in line:
-        a = line.split("\"")
-        temp = a[a.index(" imports=")+1].split()
-        for i in temp:
-            imports.append(clean(i))
+        if checkImportInDynamic(line): 
+            a = line.split("\"")
+            temp = a[a.index(" imports=")+1].split()
+            for i in temp:
+                imports.append(clean(i))
     return imports
             
 

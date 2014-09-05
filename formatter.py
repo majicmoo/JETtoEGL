@@ -57,6 +57,8 @@ def formatter(filename):
         if not skip:
             if line == "[%;} %]\n":
                 file_destination.write("[%} %]\n")
+            elif line == "};\n":
+                file_destination.write("}\n")    
             else:
                 if line_count != len(file_lines)-1:
                     next_line = file_lines[line_count+1]

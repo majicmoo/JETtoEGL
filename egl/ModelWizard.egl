@@ -339,7 +339,7 @@ finally
 progressMonitor.done();
 }
 }
-};
+}
 getContainer().run(false, false, operation);
 [%if (genModel.isRichClientPlatform()) {%]
 return [%=genModel.getImportedName(genModel.getQualifiedEditorAdvisorClassName())%].openEditor(workbench, fileURI);			
@@ -626,7 +626,7 @@ public void modifyText(ModifyEvent e)
 {
 setPageComplete(validatePage());
 }
-};
+}
 /**
 * <!-- begin-user-doc -->
 * <!-- end-user-doc -->

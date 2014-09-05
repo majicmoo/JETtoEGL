@@ -142,7 +142,7 @@ new [%=genEnum.getName()%][]
 [%for (genEnumLiteral in genEnum.getGenEnumLiterals()){%]
 [%=genEnumLiteral.getEnumLiteralInstanceConstantName()%],
 [%} %]
-};
+}
 /**
 * A public read-only list of all the '<em><b>[%=genEnum.getFormattedName()%]</b></em>' enumerators.
 * <!-- begin-user-doc -->

@@ -279,7 +279,7 @@ new PatternMatcher []
 var pattern = p.next();%]
 [%=genModel.getImportedName("org.eclipse.emf.ecore.xml.type.util.XMLTypeUtil")%].createPatternMatcher([%=pattern%])[%=if (p.hasNext()) {",";} else {"";};%]%][%};} %]
 }[%=if (k.hasNext()) {",";} else {"";};%]%][%};} %]
-};
+}
 [%} else if (constraint.equals("Enumeration") and notgenDataType.getEnumerationLiterals().isEmpty()) {%]
 /**
 * <!-- begin-user-doc -->
