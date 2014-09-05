@@ -271,13 +271,6 @@ if (genModel.useClassOverrideAnnotation()) {
 //&&&staticSymbol&&&		
 //&&&staticSymbol&&&		if (properties == null)
 //&&&staticSymbol&&&		{
-//&&&staticSymbol&&&			properties = Collections.<%
-if (genModel.useGenerics()) {
-//&&&staticSymbol&&&%>emptyMap()<%
-} else {
-//&&&staticSymbol&&&%>EMPTY_MAP<%
-}
-//&&&staticSymbol&&&%>;
 //&&&staticSymbol&&&		}
 //&&&staticSymbol&&&		
 //&&&staticSymbol&&&		SAXParser saxParser = null;

@@ -33,6 +33,7 @@
         //&&&staticSymbol&&&=genModel.getEditorPluginPackageName()
         //&&&staticSymbol&&&%>;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.EditorEntryPoint;
         //&&&staticSymbol&&&<%
         genModel.markImportLocation(stringBuffer);
         //&&&staticSymbol&&&%>

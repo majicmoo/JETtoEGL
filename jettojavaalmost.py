@@ -1,5 +1,6 @@
 import os
 import glob
+import re
 
 
 def main(fname):
@@ -163,12 +164,55 @@ def commentStatic(line, filename, inDynamic, staticSymbol, include):
                 
     
     
+    if "Collections.<" in line:
+        temp = line.strip()
+        dynamic = False
+        stopStore = False
+        store = ""
+        if temp.startswith("<%"):
+            before = line[0]
+            count = 0
+            for i in line:
+                if count != 0:
+                    if before == "<" and i == "%":
+                        #InDynamic
+                        dynamic = True
+                        store += "\n"+staticSymbol+before+i+"\n"
+                    if i != "%":
+                        if before == "%" and i == ">":
+                            #NotInDynamic
+                            dynamic = False
+                            store += "\n"+ staticSymbol+before+i+"\n"
+                       # elif before == "%":
+                          #  store += "%"
+                        if dynamic:
+                            # .< (Collections)
+                            if before == "." and i == "<":
+                                #In List<fdfjdf>
+                                stopStore = True
+                            if stopStore:
+                                if i == ">":
+                                    stopStore = False
+                            else:
+                                store += i
+                count += 1
+                before = i
+        print store
+        writeToFile(filename, store)       
+        return inDynamic, include
+                        
+                               
+                            
+                        
     
     
     ##returns if an import statement
     if "import" in line:
         if not commentChecker(line, "import"):
-            return inDynamic, include
+            if checkImportInDynamic(line):
+                return inDynamic, include
+    
+    
          
     count = 0
     temp = False
@@ -254,6 +298,11 @@ def commentChecker(line, keyword):
         if keyword in commentSplit[0]: 
             return False
     if keyword in temp_line[0]:
+        return False
+    return True
+    
+def checkImportInDynamic(line):
+    if "<%" not in line:
         return False
     return True
 

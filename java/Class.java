@@ -1064,6 +1064,7 @@ if (genModel.useClassOverrideAnnotation()) {
 //&&&staticSymbol&&&<%
 if (isImplementation) {
 //&&&staticSymbol&&&%>
+
 //&&&staticSymbol&&&<%
  GenClass classExtendsGenClass = genClass.getClassExtendsGenClass(); List<GenFeature> classExtendsAllGenFeatures = classExtendsGenClass == null? Collections.emptyList() : classExtendsGenClass.getAllGenFeatures();
 //&&&staticSymbol&&&%>

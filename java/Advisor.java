@@ -35,48 +35,90 @@ String _StringBuilder = genModel.getImportedName(genModel.useGenerics() ? "java.
 //&&&staticSymbol&&&<%
 if (!genModel.isRichAjaxPlatform()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import java.io.File;
+//&&&staticSymbol&&&import java.util.Arrays;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 if (!genModel.useGenerics()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import java.util.Iterator;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&<%
 if (genModel.getAllGenPackagesWithConcreteClasses().size() > 1) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import java.util.List;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.equinox.app.IApplication;
+//&&&staticSymbol&&&import org.eclipse.equinox.app.IApplicationContext;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.jface.action.GroupMarker;
+//&&&staticSymbol&&&import org.eclipse.jface.action.IAction;
+//&&&staticSymbol&&&import org.eclipse.jface.action.IMenuManager;
+//&&&staticSymbol&&&import org.eclipse.jface.action.MenuManager;
+//&&&staticSymbol&&&import org.eclipse.jface.action.Separator;
+//&&&staticSymbol&&&import org.eclipse.jface.dialogs.MessageDialog;
+//&&&staticSymbol&&&import org.eclipse.jface.window.Window;
 //&&&staticSymbol&&&<%
 if (!genModel.isRichAjaxPlatform()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.swt.SWT;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.swt.graphics.Point;
+//&&&staticSymbol&&&import org.eclipse.swt.widgets.Display;
 //&&&staticSymbol&&&<%
 if (!genModel.isRichAjaxPlatform()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.swt.widgets.FileDialog;
+//&&&staticSymbol&&&import org.eclipse.swt.widgets.Shell;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.ui.IEditorDescriptor;
+//&&&staticSymbol&&&import org.eclipse.ui.IFolderLayout;
+//&&&staticSymbol&&&import org.eclipse.ui.IPageLayout;
+//&&&staticSymbol&&&import org.eclipse.ui.IPerspectiveFactory;
+//&&&staticSymbol&&&import org.eclipse.ui.IWorkbench;
+//&&&staticSymbol&&&import org.eclipse.ui.IWorkbenchActionConstants;
+//&&&staticSymbol&&&import org.eclipse.ui.IWorkbenchPage;
+//&&&staticSymbol&&&import org.eclipse.ui.IWorkbenchWindow;
+//&&&staticSymbol&&&import org.eclipse.ui.PartInitException;
+//&&&staticSymbol&&&import org.eclipse.ui.PlatformUI;
+//&&&staticSymbol&&&import org.eclipse.ui.actions.ActionFactory;
 //&&&staticSymbol&&&<%
 if (!genModel.isRichAjaxPlatform()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.ui.actions.ContributionItemFactory;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.ui.application.ActionBarAdvisor;
+//&&&staticSymbol&&&import org.eclipse.ui.application.IActionBarConfigurer;
+//&&&staticSymbol&&&import org.eclipse.ui.application.IWorkbenchConfigurer;
+//&&&staticSymbol&&&import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
+//&&&staticSymbol&&&import org.eclipse.ui.application.WorkbenchAdvisor;
+//&&&staticSymbol&&&import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.common.ui.URIEditorInput;
+//&&&staticSymbol&&&import org.eclipse.emf.common.ui.action.WorkbenchWindowActionDelegate;
+//&&&staticSymbol&&&import org.eclipse.emf.common.util.URI;
 //&&&staticSymbol&&&<%
 if (genModel.getAllGenPackagesWithConcreteClasses().size() > 1) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.emf.common.util.UniqueEList;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.emf.edit.ui.action.LoadResourceAction;
+//&&&staticSymbol&&&import org.eclipse.emf.edit.ui.util.EditUIUtil;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 genModel.markImportLocation(stringBuffer);

@@ -15,6 +15,7 @@
 Iterator.class.getName();%]
 [%include("../Header.javajetinc");%]
 package [%=genModel.getEditorPluginPackageName()%];
+import org.eclipse.emf.edit.ui.EditorEntryPoint;
 [%genModel.markImportLocation(stringBuffer);%]
 /**
 * This is the entry point.

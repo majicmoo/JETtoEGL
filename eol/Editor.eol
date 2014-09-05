@@ -104,11 +104,30 @@
         //&&&staticSymbol&&&%>;
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import java.io.IOException;
+        //&&&staticSymbol&&&import java.io.InputStream;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import java.util.ArrayList;
+        //&&&staticSymbol&&&import java.util.Collection;
+        //&&&staticSymbol&&&import java.util.Collections;
+        //&&&staticSymbol&&&import java.util.EventObject;
+        //&&&staticSymbol&&&import java.util.HashMap;
+        //&&&staticSymbol&&&import java.util.Iterator;
+        //&&&staticSymbol&&&import java.util.LinkedHashMap;
+        //&&&staticSymbol&&&import java.util.List;
+        //&&&staticSymbol&&&import java.util.Map;
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform()) {
             //&&&staticSymbol&&&%>
             //&&&staticSymbol&&&
+            //&&&staticSymbol&&&import org.eclipse.core.resources.IFile;
+            //&&&staticSymbol&&&import org.eclipse.core.resources.IMarker;
+            //&&&staticSymbol&&&import org.eclipse.core.resources.IResource;
+            //&&&staticSymbol&&&import org.eclipse.core.resources.IResourceChangeEvent;
+            //&&&staticSymbol&&&import org.eclipse.core.resources.IResourceChangeListener;
+            //&&&staticSymbol&&&import org.eclipse.core.resources.IResourceDelta;
+            //&&&staticSymbol&&&import org.eclipse.core.resources.IResourceDeltaVisitor;
+            //&&&staticSymbol&&&import org.eclipse.core.resources.ResourcesPlugin;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
@@ -116,15 +135,28 @@
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.core.runtime.CoreException;
+            //&&&staticSymbol&&&import org.eclipse.core.runtime.IPath;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.core.runtime.IProgressMonitor;
+        //&&&staticSymbol&&&import org.eclipse.core.runtime.NullProgressMonitor;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.jface.action.IMenuListener;
+        //&&&staticSymbol&&&import org.eclipse.jface.action.IMenuManager;
+        //&&&staticSymbol&&&import org.eclipse.jface.action.IStatusLineManager;
+        //&&&staticSymbol&&&import org.eclipse.jface.action.IToolBarManager;
+        //&&&staticSymbol&&&import org.eclipse.jface.action.MenuManager;
+        //&&&staticSymbol&&&import org.eclipse.jface.action.Separator;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.jface.dialogs.MessageDialog;
+        //&&&staticSymbol&&&import org.eclipse.jface.dialogs.ProgressMonitorDialog;
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&<%
         if (genModel.getRuntimeVersion().getValue() >= GenRuntimeVersion.EMF29_VALUE) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.jface.util.LocalSelectionTransfer;
             //&&&staticSymbol&&&
             //&&&staticSymbol&&&<%
         }
@@ -132,64 +164,102 @@
         //&&&staticSymbol&&&<%
         if (genPackage.isMultipleEditorPages()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.jface.viewers.ColumnWeightData;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.ISelection;
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.ISelectionChangedListener;
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.ISelectionProvider;
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.IStructuredSelection;
         //&&&staticSymbol&&&<%
         if (genPackage.isMultipleEditorPages()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.jface.viewers.ListViewer;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.SelectionChangedEvent;
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.StructuredSelection;
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.StructuredViewer;
         //&&&staticSymbol&&&<%
         if (genPackage.isMultipleEditorPages()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.jface.viewers.TableLayout;
+            //&&&staticSymbol&&&import org.eclipse.jface.viewers.TableViewer;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.TreeViewer;
+        //&&&staticSymbol&&&import org.eclipse.jface.viewers.Viewer;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.swt.SWT;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.swt.custom.CTabFolder;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.swt.dnd.DND;
         //&&&staticSymbol&&&<%
         if (genModel.getRuntimeVersion().getValue() >= GenRuntimeVersion.EMF29_VALUE) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.swt.dnd.FileTransfer;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.swt.dnd.Transfer;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.swt.events.ControlAdapter;
+        //&&&staticSymbol&&&import org.eclipse.swt.events.ControlEvent;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.swt.graphics.Point;
         //&&&staticSymbol&&&<%
         if (genPackage.isMultipleEditorPages()) {
             //&&&staticSymbol&&&%>
             //&&&staticSymbol&&&
+            //&&&staticSymbol&&&import org.eclipse.swt.layout.FillLayout;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.swt.widgets.Composite;
+        //&&&staticSymbol&&&import org.eclipse.swt.widgets.Menu;
         //&&&staticSymbol&&&<%
         if (genPackage.isMultipleEditorPages()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.swt.widgets.Table;
+            //&&&staticSymbol&&&import org.eclipse.swt.widgets.TableColumn;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.swt.widgets.Tree;
         //&&&staticSymbol&&&<%
         if (genPackage.isMultipleEditorPages()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.swt.widgets.TreeColumn;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.ui.IActionBars;
+        //&&&staticSymbol&&&import org.eclipse.ui.IEditorInput;
+        //&&&staticSymbol&&&import org.eclipse.ui.IEditorPart;
+        //&&&staticSymbol&&&import org.eclipse.ui.IEditorSite;
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform() and genModel.getComplianceLevel().getValue() < GenJDKLevel.JDK50) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.ui.IFileEditorInput;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.ui.IPartListener;
+        //&&&staticSymbol&&&import org.eclipse.ui.IWorkbenchPart;
+        //&&&staticSymbol&&&import org.eclipse.ui.PartInitException;
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform()) {
             //&&&staticSymbol&&&%>
             //&&&staticSymbol&&&
+            //&&&staticSymbol&&&import org.eclipse.ui.dialogs.SaveAsDialog;
             //&&&staticSymbol&&&
+            //&&&staticSymbol&&&import org.eclipse.ui.ide.IGotoMarker;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
@@ -197,54 +267,96 @@
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.ui.part.FileEditorInput;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&import org.eclipse.ui.part.MultiPageEditorPart;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.ui.views.contentoutline.ContentOutline;
+        //&&&staticSymbol&&&import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
+        //&&&staticSymbol&&&import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.ui.views.properties.IPropertySheetPage;
+        //&&&staticSymbol&&&import org.eclipse.ui.views.properties.PropertySheet;
+        //&&&staticSymbol&&&import org.eclipse.ui.views.properties.PropertySheetPage;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.common.command.BasicCommandStack;
+        //&&&staticSymbol&&&import org.eclipse.emf.common.command.Command;
+        //&&&staticSymbol&&&import org.eclipse.emf.common.command.CommandStack;
+        //&&&staticSymbol&&&import org.eclipse.emf.common.command.CommandStackListener;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.common.notify.AdapterFactory;
+        //&&&staticSymbol&&&import org.eclipse.emf.common.notify.Notification;
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.emf.common.ui.MarkerHelper;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&<%
         if (genPackage.isMultipleEditorPages()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.emf.common.ui.ViewerPane;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.common.ui.viewer.IViewerProvider;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.common.util.BasicDiagnostic;
+        //&&&staticSymbol&&&import org.eclipse.emf.common.util.Diagnostic;
+        //&&&staticSymbol&&&import org.eclipse.emf.common.util.URI;
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform() and genModel.getRuntimeVersion().getValue() < GenRuntimeVersion.EMF23_VALUE) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.emf.ecore.EObject;
+            //&&&staticSymbol&&&import org.eclipse.emf.ecore.EValidator;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.ecore.resource.Resource;
         //&&&staticSymbol&&&<%
         if (not  genModel.isRichClientPlatform()) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.emf.ecore.resource.ResourceSet;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.ecore.util.EContentAdapter;
+        //&&&staticSymbol&&&import org.eclipse.emf.ecore.util.EcoreUtil;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.domain.EditingDomain;
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.domain.IEditingDomainProvider;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.action.EditingDomainActionBarContributor;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.celleditor.AdapterFactoryTreeEditor;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
         //&&&staticSymbol&&&<%
         if (genModel.getRuntimeVersion().getValue() >= GenRuntimeVersion.EMF23_VALUE) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
@@ -252,16 +364,19 @@
         if (not  genModel.isRichClientPlatform()) {
             //&&&staticSymbol&&&%>
             //&&&staticSymbol&&&
+            //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&<%
         if (genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) {
             //&&&staticSymbol&&&%>
+            //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.util.EditUIUtil;
             //&&&staticSymbol&&&<%
         }
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&<%
@@ -1333,6 +1448,7 @@
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&	/**
         //&&&staticSymbol&&&	 * This returns the editing domain as required by the {@link IEditingDomainProvider} interface.
+        //&&&staticSymbol&&&	 * This is important for implementing the static methods of {@link AdapterFactoryEditingDomain}
         //&&&staticSymbol&&&	 * and for supporting {@link org.eclipse.emf.edit.ui.action.CommandAction}.
         //&&&staticSymbol&&&	 * <!-- begin-user-doc -->
         //&&&staticSymbol&&&	 * <!-- end-user-doc -->

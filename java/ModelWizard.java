@@ -39,48 +39,93 @@ String _HashMapOfObjectToObject = "HashMap" + (genModel.useGenerics() ? "<" + ge
 //&&&staticSymbol&&&%>;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import java.util.ArrayList;
+//&&&staticSymbol&&&import java.util.Arrays;
+//&&&staticSymbol&&&import java.util.Collection;
+//&&&staticSymbol&&&import java.util.Collections;
+//&&&staticSymbol&&&import java.util.HashMap;
 //&&&staticSymbol&&&<%
 if (!genModel.useGenerics()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import java.util.Iterator;
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import java.util.List;
+//&&&staticSymbol&&&import java.util.Map;
+//&&&staticSymbol&&&import java.util.MissingResourceException;
+//&&&staticSymbol&&&import java.util.StringTokenizer;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 if (!genModel.isRichClientPlatform() && genModel.getComplianceLevel().getValue() >= GenJDKLevel.JDK50) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.emf.common.CommonPlugin;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.emf.common.util.URI;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.ecore.EClass;
+//&&&staticSymbol&&&import org.eclipse.emf.ecore.EClassifier;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.ecore.resource.Resource;
+//&&&staticSymbol&&&import org.eclipse.emf.ecore.resource.ResourceSet;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.ecore.EObject;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.ecore.xmi.XMLResource;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.edit.ui.provider.ExtendedImageRegistry;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 if (!genModel.isRichClientPlatform()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.core.resources.IContainer;
+//&&&staticSymbol&&&import org.eclipse.core.resources.IFile;
+//&&&staticSymbol&&&import org.eclipse.core.resources.IFolder;
+//&&&staticSymbol&&&import org.eclipse.core.resources.IProject;
+//&&&staticSymbol&&&import org.eclipse.core.resources.IResource;
+//&&&staticSymbol&&&import org.eclipse.core.resources.ResourcesPlugin;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 }
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.core.runtime.IProgressMonitor;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.jface.dialogs.MessageDialog;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.jface.viewers.IStructuredSelection;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.jface.wizard.Wizard;
+//&&&staticSymbol&&&import org.eclipse.jface.wizard.WizardPage;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.swt.SWT;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.swt.events.ModifyListener;
+//&&&staticSymbol&&&import org.eclipse.swt.events.ModifyEvent;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.swt.layout.GridData;
+//&&&staticSymbol&&&import org.eclipse.swt.layout.GridLayout;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.swt.widgets.Combo;
+//&&&staticSymbol&&&import org.eclipse.swt.widgets.Composite;
+//&&&staticSymbol&&&import org.eclipse.swt.widgets.Label;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.ui.INewWizard;
+//&&&staticSymbol&&&import org.eclipse.ui.IWorkbench;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 if (!genModel.isRichClientPlatform()) {
 //&&&staticSymbol&&&%>
+//&&&staticSymbol&&&import org.eclipse.ui.actions.WorkspaceModifyOperation;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.ui.part.FileEditorInput;
+//&&&staticSymbol&&&import org.eclipse.ui.part.ISetSelectionTarget;
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&<%
 }

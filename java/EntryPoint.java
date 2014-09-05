@@ -24,6 +24,7 @@ GenModel genModel = (GenModel)argument; /* Trick to import java.util.* without w
 //&&&staticSymbol&&&=genModel.getEditorPluginPackageName()
 //&&&staticSymbol&&&%>;
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&import org.eclipse.emf.edit.ui.EditorEntryPoint;
 //&&&staticSymbol&&&<%
 genModel.markImportLocation(stringBuffer);
 //&&&staticSymbol&&&%>

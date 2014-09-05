@@ -158,7 +158,6 @@ requiredFeatures.putAll(features);
 }
 if (properties == null)
 {
-properties = Collections.[%if (genModel.useGenerics()) {%]emptyMap()[%} else {%]EMPTY_MAP[%}%];
 }
 SAXParser saxParser = null;
 try

@@ -1,3 +1,15 @@
-        if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EPackage");} else {genPackage.getPackageInterfaceName();};
-        if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EFactory");} else {genPackage.getFactoryInterfaceName();};
-        if (genModel.isSuppressEMFMetaData()) {"EFactoryInstance";} else {genPackage.getFactoryName();};
+        if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};
+        if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};
+        if (p.hasNext()) {",";} else {"";};
+        if (k.hasNext()) {",";} else {"";};
+        if (k.hasNext()) {",";} else {"";};
+        if (genDataType.isMinInclusive()) {">=";} else {">";};
+        if (genDataType.isMinInclusive()) {"true";} else {"false";};
+        if (genDataType.isMinInclusive()) {"true";} else {"false";};
+        if (genDataType.isMinInclusive()) {">=";} else {">";};
+        if (genDataType.isMinInclusive()) {"true";} else {"false";};
+        if (genDataType.isMaxInclusive()) {"<=";} else {"<";};
+        if (genDataType.isMaxInclusive()) {"true";} else {"false";};
+        if (genDataType.isMaxInclusive()) {"true";} else {"false";};
+        if (genDataType.isMaxInclusive()) {"<=";} else {"<";};
+        if (genDataType.isMaxInclusive()) {"true";} else {"false";};
