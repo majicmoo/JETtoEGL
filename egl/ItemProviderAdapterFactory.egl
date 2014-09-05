@@ -288,7 +288,7 @@ disposable.add(adapter);
 * <!-- begin-user-doc -->
 * <!-- end-user-doc -->
 * @generated
-*/public [%=genModel.getImportedName(if (useGenerics) {"java.util.List<org.eclipse.emf.edit.provider.IChildCreationExtender>";} else {"java.util.List";});%]%] getChildCreationExtenders()
+*/public [%=genModel.getImportedName(if (useGenerics) {"java.util.List<org.eclipse.emf.edit.provider.IChildCreationExtender>";} else {"java.util.List";});%] getChildCreationExtenders()
 {
 return childCreationExtenderManager.getChildCreationExtenders();
 }
@@ -296,7 +296,7 @@ return childCreationExtenderManager.getChildCreationExtenders();
 * <!-- begin-user-doc -->
 * <!-- end-user-doc -->
 * @generated
-*/public [%=genModel.getImportedName(if (useGenerics) {"java.util.Collection<?>";} else {"java.util.Collection";});%]%] getNewChildDescriptors(Object object, [%=genModel.getImportedName("org.eclipse.emf.edit.domain.EditingDomain")%] editingDomain)
+*/public [%=genModel.getImportedName(if (useGenerics) {"java.util.Collection<?>";} else {"java.util.Collection";});%] getNewChildDescriptors(Object object, [%=genModel.getImportedName("org.eclipse.emf.edit.domain.EditingDomain")%] editingDomain)
 {
 return childCreationExtenderManager.getNewChildDescriptors(object, editingDomain);
 }
@@ -380,14 +380,14 @@ public static class [%=genPackage.getChildCreationExtenderName(packageEntry.getK
 * <!-- end-user-doc -->
 * @generated
 */
-protected static class CreationSwitch extends [%=genModel.getImportedName(packageEntry.getKey().getQualifiedSwitchClassName())%][%=if (useGenerics) {"<Object>";} else {"";};%]%]
+protected static class CreationSwitch extends [%=genModel.getImportedName(packageEntry.getKey().getQualifiedSwitchClassName())%][%=if (useGenerics) {"<Object>";} else {"";};%]
 {
 /**
 * The child descriptors being populated.
 * <!-- begin-user-doc -->
 * <!-- end-user-doc -->
 * @generated
-*/protected [%=genModel.getImportedName(if (useGenerics) {"java.util.List<Object>";} else {"java.util.List";});%]%] newChildDescriptors;
+*/protected [%=genModel.getImportedName(if (useGenerics) {"java.util.List<Object>";} else {"java.util.List";});%] newChildDescriptors;
 /**
 * The domain in which to create the children.
 * <!-- begin-user-doc -->
@@ -400,7 +400,7 @@ protected [%=genModel.getImportedName("org.eclipse.emf.edit.domain.EditingDomain
 * <!-- begin-user-doc -->
 * <!-- end-user-doc -->
 * @generated
-*/CreationSwitch([%=genModel.getImportedName(if (useGenerics) {"java.util.List<Object>";} else {"java.util.List";});%]%] newChildDescriptors, [%=genModel.getImportedName("org.eclipse.emf.edit.domain.EditingDomain")%] editingDomain) 
+*/CreationSwitch([%=genModel.getImportedName(if (useGenerics) {"java.util.List<Object>";} else {"java.util.List";});%] newChildDescriptors, [%=genModel.getImportedName("org.eclipse.emf.edit.domain.EditingDomain")%] editingDomain) 
 {
 this.newChildDescriptors = newChildDescriptors;
 this.editingDomain = editingDomain;

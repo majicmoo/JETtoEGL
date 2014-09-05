@@ -207,12 +207,12 @@ if (!validate_NoCircularContainment([%if (not(genClassifier).isEObjectExtension(
 %], [%=diagnostics%], [%=context%])) return false;
 [%} else if (first) {
 first = false;%]
-boolean [%=result%] = [%=delegate%]validate[%=if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};%]%]_[%=constraint%]([%=cast
+boolean [%=result%] = [%=delegate%]validate[%=if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};%]_[%=constraint%]([%=cast
 %][%=genClassifier.getSafeUncapName()%][%=accessor%], [%=diagnostics%], [%=context
 %]);
 [%} else {%]
 if ([%=result%] || [%=diagnostics%] != null) [%=result%] &= [%=delegate
-%]validate[%=if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};%]%]_[%=constraint%]([%=cast%][%=genClassifier.getSafeUncapName()%][%=accessor
+%]validate[%=if (constraintImplementor = null) {"";} else {constraintImplementor.getName();};%]_[%=constraint%]([%=cast%][%=genClassifier.getSafeUncapName()%][%=accessor
 %], [%=diagnostics%], [%=context%]);
 [%}%]
 [%} %]
@@ -277,8 +277,8 @@ new PatternMatcher []
 {
 [%Iterator < String > p = patternList.iterator(); while (p.hasNext();) {{
 var pattern = p.next();%]
-[%=genModel.getImportedName("org.eclipse.emf.ecore.xml.type.util.XMLTypeUtil")%].createPatternMatcher([%=pattern%])[%=if (p.hasNext()) {",";} else {"";};%]%][%};} %]
-}[%=if (k.hasNext()) {",";} else {"";};%]%][%};} %]
+[%=genModel.getImportedName("org.eclipse.emf.ecore.xml.type.util.XMLTypeUtil")%].createPatternMatcher([%=pattern%])[%=if (p.hasNext()) {",";} else {"";};%][%};} %]
+}[%=if (k.hasNext()) {",";} else {"";};%][%};} %]
 }
 [%} else if (constraint.equals("Enumeration") and notgenDataType.getEnumerationLiterals().isEmpty()) {%]
 /**
@@ -297,7 +297,7 @@ wrapEnumerationValues
 [%Iterator < String > k = genDataType.getEnumerationLiterals().iterator(); while (k.hasNext();) {{
 var literal = k.next();%]
 [%if (genDataType.isPrimitiveType() and genModel.getComplianceLevel().getValue() < GenJDKLevel.JDK50) {%]new [%=genDataType.getObjectInstanceClassName()%]([%}%][%=genDataType.getStaticValue(literal, false)
-%][%if (genDataType.isPrimitiveType() and genModel.getComplianceLevel().getValue() < GenJDKLevel.JDK50) {%])[%}%][%=if (k.hasNext()) {",";} else {"";};%]%][%};} %]
+%][%if (genDataType.isPrimitiveType() and genModel.getComplianceLevel().getValue() < GenJDKLevel.JDK50) {%])[%}%][%=if (k.hasNext()) {",";} else {"";};%][%};} %]
 });
 [%}%]
 [%}%]
@@ -418,13 +418,13 @@ reportEnumerationViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%
 return [%=result%];
 [%} else if (constraint.equals("Min") and genDataType.getMinLiteral() <> null) {%]
 [%if (genDataType.isPrimitiveType()) {%]
-boolean [%=result%] = [%=genDataType.getSafeUncapName()%] [%=if (genDataType.isMinInclusive()) {">=";} else {">";};%]%] [%=constant%]__VALUE;
+boolean [%=result%] = [%=genDataType.getSafeUncapName()%] [%=if (genDataType.isMinInclusive()) {">=";} else {">";};%] [%=constant%]__VALUE;
 if (![%=result%] && [%=diagnostics%] != null)
 [%if (genModel.getComplianceLevel().getValue() < GenJDKLevel.JDK50) {%]
 reportMinViolation([%=genDataType.getQualifiedClassifierAccessor()%], new [%=genDataType.getObjectInstanceClassName()%]([%=genDataType.getSafeUncapName()%]), new [%=genDataType.getObjectInstanceClassName()
-%]([%=constant%]__VALUE), [%=if (genDataType.isMinInclusive()) {"true";} else {"false";};%]%], [%=diagnostics%], [%=context%]);
+%]([%=constant%]__VALUE), [%=if (genDataType.isMinInclusive()) {"true";} else {"false";};%], [%=diagnostics%], [%=context%]);
 [%} else {%]
-reportMinViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMinInclusive()) {"true";} else {"false";};%]%], [%=diagnostics
+reportMinViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMinInclusive()) {"true";} else {"false";};%], [%=diagnostics
 %], [%=context%]);
 [%}%]
 return [%=result%];
@@ -441,22 +441,22 @@ int [%=comparison%] = [%=genModel.getImportedName("org.eclipse.emf.ecore.xml.typ
 boolean [%=result%] = [%if (genDataType.isMinInclusive()) {%][%=comparison%] == 0 || [%}
 %][%=comparison%] == 1;
 [%} else {%]
-boolean [%=result%] = [%=genDataType.getSafeUncapName()%].compareTo([%=constant%]__VALUE) [%=if (genDataType.isMinInclusive()) {">=";} else {">";};%]%] 0;
+boolean [%=result%] = [%=genDataType.getSafeUncapName()%].compareTo([%=constant%]__VALUE) [%=if (genDataType.isMinInclusive()) {">=";} else {">";};%] 0;
 [%}%]
 if (![%=result%] && [%=diagnostics%] != null)
-reportMinViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMinInclusive()) {"true";} else {"false";};%]%], [%=diagnostics
+reportMinViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMinInclusive()) {"true";} else {"false";};%], [%=diagnostics
 %], [%=context%]);
 return [%=result%];
 [%}%]
 [%} else if (constraint.equals("Max") and genDataType.getMaxLiteral() <> null) {%]
 [%if (genDataType.isPrimitiveType()) {%]
-boolean [%=result%] = [%=genDataType.getSafeUncapName()%] [%=if (genDataType.isMaxInclusive()) {"<=";} else {"<";};%]%] [%=constant%]__VALUE;
+boolean [%=result%] = [%=genDataType.getSafeUncapName()%] [%=if (genDataType.isMaxInclusive()) {"<=";} else {"<";};%] [%=constant%]__VALUE;
 if (![%=result%] && [%=diagnostics%] != null)
 [%if (genModel.getComplianceLevel().getValue() < GenJDKLevel.JDK50) {%]
 reportMaxViolation([%=genDataType.getQualifiedClassifierAccessor()%], new [%=genDataType.getObjectInstanceClassName()%]([%=genDataType.getSafeUncapName()%]), new [%=genDataType.getObjectInstanceClassName()
-%]([%=constant%]__VALUE), [%=if (genDataType.isMaxInclusive()) {"true";} else {"false";};%]%], [%=diagnostics%], [%=context%]);
+%]([%=constant%]__VALUE), [%=if (genDataType.isMaxInclusive()) {"true";} else {"false";};%], [%=diagnostics%], [%=context%]);
 [%} else {%]
-reportMaxViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMaxInclusive()) {"true";} else {"false";};%]%], [%=diagnostics
+reportMaxViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMaxInclusive()) {"true";} else {"false";};%], [%=diagnostics
 %], [%=context%]);
 [%}%]
 return [%=result%];
@@ -473,10 +473,10 @@ int [%=comparison%] = [%=genModel.getImportedName("org.eclipse.emf.ecore.xml.typ
 boolean [%=result%] = [%if (genDataType.isMaxInclusive()) {%][%=comparison%] == 0 || [%}
 %][%=comparison%] == -1;
 [%} else {%]
-boolean [%=result%] = [%=genDataType.getSafeUncapName()%].compareTo([%=constant%]__VALUE) [%=if (genDataType.isMaxInclusive()) {"<=";} else {"<";};%]%] 0;
+boolean [%=result%] = [%=genDataType.getSafeUncapName()%].compareTo([%=constant%]__VALUE) [%=if (genDataType.isMaxInclusive()) {"<=";} else {"<";};%] 0;
 [%}%]
 if (![%=result%] && [%=diagnostics%] != null)
-reportMaxViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMaxInclusive()) {"true";} else {"false";};%]%], [%=diagnostics
+reportMaxViolation([%=genDataType.getQualifiedClassifierAccessor()%], [%=genDataType.getSafeUncapName()%], [%=constant%]__VALUE, [%=if (genDataType.isMaxInclusive()) {"true";} else {"false";};%], [%=diagnostics
 %], [%=context%]);
 return [%=result%];
 [%}%]

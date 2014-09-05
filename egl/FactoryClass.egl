@@ -142,7 +142,7 @@ switch (eClass.getClassifierID())
 {
 [%for (genClass in genPackage.getGenClasses()){%]
 [%if (notgenClass.isAbstract()) {%]
-case [%=genPackage.getImportedPackageInterfaceName()%].[%=genClass.getClassifierID()%]: return [%=if (not genClass.isEObjectExtension()) {"(EObject)";} else {"";};%]%]create[%=genClass.getName()%]();
+case [%=genPackage.getImportedPackageInterfaceName()%].[%=genClass.getClassifierID()%]: return [%=if (not genClass.isEObjectExtension()) {"(EObject)";} else {"";};%]create[%=genClass.getName()%]();
 [%}%]
 [%} %]
 default:
@@ -749,7 +749,7 @@ public static [%=genPackage.getImportedPackageInterfaceName()%] getPackage()
 return [%=genPackage.getImportedPackageInterfaceName()%].eINSTANCE;
 }
 [%}%]
-} //[%=if (isInterface) {genPackage.getFactoryInterfaceName();} else {genPackage.getFactoryClassName();};%]%]
+} //[%=if (isInterface) {genPackage.getFactoryInterfaceName();} else {genPackage.getFactoryClassName();};%]
 [%genModel.emitSortedImports();%]
 }
 }

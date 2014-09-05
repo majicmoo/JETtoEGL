@@ -63,11 +63,18 @@ for (int item : numbers) {
 Slots
 
 <%=a.name();%> 
+<%=b.name();%> 
+<%=c.name();%> 
+
 *********************************************   
 Conditional
 <% int b;%>
 <% int bob = (a > b) ? a : b; %>
-<%= int max = (a > b) ? a : b; %>
+<%= int a = (a > b) ? a : b%>
+<%= int b = (a > b) ? a : b %>
+<%= int c = (a > b) ? a : b %>
+<%= int d = (a > b) ? a : b %>
+
     
 
 

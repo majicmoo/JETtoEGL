@@ -25,9 +25,9 @@ package [%=genPackage.getProviderPackageName()%];
 * <!-- end-user-doc -->
 * @generated
 */
-public class [%=genClass.getProviderClassName()%] [%if (genClass.getProviderImplementsClassNames().isEmpty()) {%]extends [%=if (genClass.getProviderBaseClassName() <> null) {genClass.getProviderBaseClassName();} else {genModel.getImportedName("org.eclipse.emf.edit.provider.ItemProviderAdapter");};%]%][%}%]
+public class [%=genClass.getProviderClassName()%] [%if (genClass.getProviderImplementsClassNames().isEmpty()) {%]extends [%=if (genClass.getProviderBaseClassName() <> null) {genClass.getProviderBaseClassName();} else {genModel.getImportedName("org.eclipse.emf.edit.provider.ItemProviderAdapter");};%][%}%]
 [%if (notgenClass.getProviderImplementsClassNames().isEmpty()) {%]
-extends [%=if (genClass.getProviderBaseClassName() <> null) {genClass.getProviderBaseClassName();} else {genModel.getImportedName("org.eclipse.emf.edit.provider.ItemProviderAdapter");};%]%]
+extends [%=if (genClass.getProviderBaseClassName() <> null) {genClass.getProviderBaseClassName();} else {genModel.getImportedName("org.eclipse.emf.edit.provider.ItemProviderAdapter");};%]
 implements
 [%Iterator < String > i = genClass.getProviderImplementsClassNames().iterator(); while (i.hasNext();) {{%]
 [%=genModel.getImportedName(i.next())%][%if (i.hasNext()) {%],[%}%]
@@ -93,8 +93,8 @@ getString("_UI_PropertyDescriptor_description", "_UI_[%=genFeature.getGenClass()
 getString("_UI_[%=genFeature.getGenClass().getName()%]_[%=genFeature.getName()%]_description"),[%=genModel.getNonNLS()%]
 [%}%]
 [%=genFeature.getQualifiedFeatureAccessor()%],
-[%=if (genFeature.getProperty() = GenPropertyKind.EDITABLE_LITERAL) {"true";} else {"false";};%]%],[%=if (genFeature.isPropertyMultiLine()) {"true";} else {"false";};%]%],
-[%=if (genFeature.isPropertySortChoices()) {"true";} else {"false";};%]%],
+[%=if (genFeature.getProperty() = GenPropertyKind.EDITABLE_LITERAL) {"true";} else {"false";};%],[%=if (genFeature.isPropertyMultiLine()) {"true";} else {"false";};%],
+[%=if (genFeature.isPropertySortChoices()) {"true";} else {"false";};%],
 [%if (genFeature.isReferenceType()) {%]
 null,
 [%} else {%]
@@ -132,7 +132,7 @@ var filterFlag = j.next();%]
 [%if (genModel.useClassOverrideAnnotation()) {%]
 @Override
 [%}%]
-public [%=genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<? extends org.eclipse.emf.ecore.EStructuralFeature>";} else {"java.util.Collection";});%]%] getChildrenFeatures(Object object)
+public [%=genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<? extends org.eclipse.emf.ecore.EStructuralFeature>";} else {"java.util.Collection";});%] getChildrenFeatures(Object object)
 {
 if (childrenFeatures == null)
 {
@@ -390,7 +390,7 @@ super.notifyChanged(notification);
 [%if (genModel.useClassOverrideAnnotation()) {%]
 @Override
 [%}%]
-protected void collectNewChildDescriptors([%=genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<java.lang.Object>";} else {"java.util.Collection";});%]%] newChildDescriptors, Object object)
+protected void collectNewChildDescriptors([%=genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<java.lang.Object>";} else {"java.util.Collection";});%] newChildDescriptors, Object object)
 {
 super.collectNewChildDescriptors(newChildDescriptors, object);
 [%for (childCreationData in genClass.getChildCreationData()){
@@ -464,7 +464,7 @@ var literal = createFeature.getCreateChildValueLiteral();%]
 [%if (genModel.useClassOverrideAnnotation()) {%]
 @Override
 [%}%]
-public String getCreateChildText(Object owner, Object feature, Object child, [%=genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<?>";} else {"java.util.Collection";});%]%] selection)
+public String getCreateChildText(Object owner, Object feature, Object child, [%=genModel.getImportedName(if (genModel.useGenerics()) {"java.util.Collection<?>";} else {"java.util.Collection";});%] selection)
 {
 Object childFeature = feature;
 Object childObject = child;
@@ -479,7 +479,7 @@ childObject = entry.getValue();
 boolean qualify =
 [%Iterator < GenFeature > i = genClass.getSharedClassCreateChildFeatures().iterator(); while (i.hasNext();) {{
 var createFeature = i.next();%]
-childFeature == [%=createFeature.getQualifiedFeatureAccessor()%][%=if (i.hasNext()) {" ||";} else {";";};%]%]
+childFeature == [%=createFeature.getQualifiedFeatureAccessor()%][%=if (i.hasNext()) {" ||";} else {";";};%]
 [%};} %]
 if (qualify)
 {

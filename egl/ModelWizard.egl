@@ -113,13 +113,13 @@ public static final String FORMATTED_FILE_EXTENSIONS =
 * <!-- begin-user-doc -->
 * <!-- end-user-doc -->
 * @generated
-*/protected [%=if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EPackage");} else {genPackage.getPackageInterfaceName();};%]%] [%=genPackage.getUncapPackageName()%] = [%=genPackage.getPackageInterfaceName()%].eINSTANCE;
+*/protected [%=if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EPackage");} else {genPackage.getPackageInterfaceName();};%] [%=genPackage.getUncapPackageName()%] = [%=genPackage.getPackageInterfaceName()%].eINSTANCE;
 /**
 * This caches an instance of the model factory.
 * <!-- begin-user-doc -->
 * <!-- end-user-doc -->
 * @generated
-*/protected [%=if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EFactory");} else {genPackage.getFactoryInterfaceName();};%]%] [%=genPackage.getUncapFactoryName()%] = [%=genPackage.getUncapPackageName()%].get[%=if (genModel.isSuppressEMFMetaData()) {"EFactoryInstance";} else {genPackage.getFactoryName();};%]%]();
+*/protected [%=if (genModel.isSuppressEMFMetaData()) {genModel.getImportedName("org.eclipse.emf.ecore.EFactory");} else {genPackage.getFactoryInterfaceName();};%] [%=genPackage.getUncapFactoryName()%] = [%=genPackage.getUncapPackageName()%].get[%=if (genModel.isSuppressEMFMetaData()) {"EFactoryInstance";} else {genPackage.getFactoryName();};%]();
 [%if (notgenModel.isRichClientPlatform()) {%]
 /**
 * This is the file creation page.

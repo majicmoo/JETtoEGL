@@ -50,9 +50,13 @@ a = 7;} x = x + 1;} %]
 *********************************************
 Slots
 [%=a.name();%] 
+[%=b.name();%] 
+[%=c.name();%] 
 *********************************************   
 Conditional
 [%int b;%]
 [%int bob = if ((a > b)) {a;} else {b;};%]
-[%=int max = if ((a > b)) {a;} else {b;};%]%]
+[%=int a = if ((a > b)) {a;} else {b;};%][%=int b = if ((a > b)) {a;} else {b;};%]
+[%=int c = if ((a > b)) {a;} else {b;};%][%=int d = if ((a > b)) {a;} else {b;};%]
+}
 }

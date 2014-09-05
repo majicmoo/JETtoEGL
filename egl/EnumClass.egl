@@ -50,7 +50,7 @@ first = false;%]
 * @generated
 */
 public [%if (isEnum) {%]enum[%} else {%]final class[%}%] [%=genEnum.getName()
-%] [%if (isEnum) {%]implements[%} else {%]extends[%}%] [%=if (genModel.isSuppressEMFMetaData() and not genModel.isSuppressInterfaces()) {"Internal" + genEnum.getName();} else {genModel.getImportedName(if (isEnum) {"org.eclipse.emf.common.util.Enumerator";} else {"org.eclipse.emf.common.util.AbstractEnumerator";});};%]%]
+%] [%if (isEnum) {%]implements[%} else {%]extends[%}%] [%=if (genModel.isSuppressEMFMetaData() and not genModel.isSuppressInterfaces()) {"Internal" + genEnum.getName();} else {genModel.getImportedName(if (isEnum) {"org.eclipse.emf.common.util.Enumerator";} else {"org.eclipse.emf.common.util.AbstractEnumerator";});};%]
 {
 [%if (isEnum) {%]
 [%if (genEnum.getGenEnumLiterals().isEmpty()) {%]

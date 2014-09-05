@@ -93,6 +93,13 @@
         //&&&staticSymbol&&&<%
         //&&&staticSymbol&&&=a.name();
         //&&&staticSymbol&&&%> 
+        //&&&staticSymbol&&&<%
+        //&&&staticSymbol&&&=b.name();
+        //&&&staticSymbol&&&%> 
+        //&&&staticSymbol&&&<%
+        //&&&staticSymbol&&&=c.name();
+        //&&&staticSymbol&&&%> 
+        //&&&staticSymbol&&&
         //&&&staticSymbol&&&*********************************************   
         //&&&staticSymbol&&&Conditional
         //&&&staticSymbol&&&<%
@@ -104,6 +111,16 @@
         //&&&staticSymbol&&&<%
         //&&&staticSymbol&&&*%%storeSymbol%%*0
         //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        //&&&staticSymbol&&&*%%storeSymbol%%*1
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        //&&&staticSymbol&&&*%%storeSymbol%%*2
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        //&&&staticSymbol&&&*%%storeSymbol%%*3
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&
         //&&&staticSymbol&&&    
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&

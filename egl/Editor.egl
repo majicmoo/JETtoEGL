@@ -1959,9 +1959,9 @@ return true;
 @Override
 [%}%]
 protected boolean processResources()
-{[%="List" + (if (genModel.useGenerics()) {"<URI>";} else {"";});%]%] uris = getURIs();
+{[%="List" + (if (genModel.useGenerics()) {"<URI>";} else {"";});%] uris = getURIs();
 if (uris.size() > 0)
-{URI uri = [%=if (genModel.useGenerics()) {"";} else {"(URI)";};%]%]uris.get(0);
+{URI uri = [%=if (genModel.useGenerics()) {"";} else {"(URI)";};%]uris.get(0);
 doSaveAs(uri, new [%=genModel.getImportedName("org.eclipse.emf.common.ui.URIEditorInput")%](uri));
 return true;
 }

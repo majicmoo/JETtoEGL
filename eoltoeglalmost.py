@@ -61,8 +61,8 @@ def main(fname):
                         lineTemp = line.replace(staticSymbol, "")
                         lineTemp = lineTemp.replace(storeSymbol, "")
                         ## write to file removing whiteSPACE
-                          
-                        writeToFile(file_edit, "="+re.sub( '\s+',' ', storedLines[int(clean(lineTemp))]).strip()+"%>")
+                        writeToFile(file_edit, "="+re.sub( '\s+',' ', storedLines[int(clean(lineTemp))]).strip())
+                        
                     else:
                         writeToFile(file_edit, line.replace(staticSymbol, ""))
                 else:
@@ -88,6 +88,8 @@ def main(fname):
     for line in file_edit:
         if line != "\n" :
             if (line_count!=0) and (line_count !=1) and (line_count != max_line-2) and (line_count != max_line-1):
+                #if file_destination.name == "egl/testEverything.egl":
+                    #print line
                 temp = line.replace("%>", "%]")
                 temp = temp.replace("<%\n", "[%")
                 writeToFile(file_destination, temp.replace("<%", "[%"))
