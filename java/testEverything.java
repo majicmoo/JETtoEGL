@@ -64,6 +64,7 @@ if (isGWT) {
 //&&&staticSymbol&&&hello
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&
+//&&&staticSymbol&&&{{
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&*********************************************
@@ -86,7 +87,7 @@ for (int item : numbers) {
 //&&&staticSymbol&&&    
 //&&&staticSymbol&&& *********************************************
 //&&&staticSymbol&&&Slots
-//&&&staticSymbol&&&
+//&&&staticSymbol&&&}
 //&&&staticSymbol&&&<%
 //&&&staticSymbol&&&=a.name();
 //&&&staticSymbol&&&%> 
@@ -119,6 +120,19 @@ for (int item : numbers) {
 //&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&    
+//&&&staticSymbol&&&{
+//&&&staticSymbol&&&**************************************************
+//&&&staticSymbol&&&Comments
+//&&&staticSymbol&&&
+//&&&staticSymbol&&&<%
+//testing comment*
+//&&&staticSymbol&&&%>
+//&&&staticSymbol&&&<%
+/* ...........
+* .....
+* ..........
+*/ 
+//&&&staticSymbol&&&%>
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&
 //&&&staticSymbol&&&

@@ -56,7 +56,7 @@ end compounds
 
 % Python comments are # to end-of-line
 comments 
-    '# 
+    [* *] 
     '\
 end comments
 

@@ -67,6 +67,7 @@
         //&&&staticSymbol&&&hello
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&
+        //&&&staticSymbol&&&{{
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&*********************************************
@@ -89,7 +90,7 @@
         //&&&staticSymbol&&&    
         //&&&staticSymbol&&& *********************************************
         //&&&staticSymbol&&&Slots
-        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&}
         //&&&staticSymbol&&&<%
         //&&&staticSymbol&&&=a.name();
         //&&&staticSymbol&&&%> 
@@ -122,6 +123,22 @@
         //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&    
+        //&&&staticSymbol&&&{
+        //&&&staticSymbol&&&**************************************************
+        //&&&staticSymbol&&&Comments
+        //&&&staticSymbol&&&
+        //&&&staticSymbol&&&<%
+        //testing comment*
+        //&&&staticSymbol&&&%>
+        //&&&staticSymbol&&&<%
+        /* ...........
+        
+           * .....
+        
+           * ..........
+        
+           */
+        //&&&staticSymbol&&&%>
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&
         //&&&staticSymbol&&&

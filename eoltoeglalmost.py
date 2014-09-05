@@ -83,18 +83,17 @@ def main(fname):
     file_edit.close()
     file_edit = open(edit_fname, "r")
     ##print max_line
+    print max_line
     line_count=0
     ## change brackets
     for line in file_edit:
         if line != "\n" :
             if (line_count!=0) and (line_count !=1) and (line_count != max_line-2) and (line_count != max_line-1):
-                #if file_destination.name == "egl/testEverything.egl":
-                    #print line
+            
                 temp = line.replace("%>", "%]")
                 temp = temp.replace("<%\n", "[%")
                 writeToFile(file_destination, temp.replace("<%", "[%"))
             line_count += 1
-      
         
     file_origin.close()
     file_edit.close()
